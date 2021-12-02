@@ -2,8 +2,10 @@ package com.example.didaktikappartzikulturapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,27 +15,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
-
-    }
-
-
-    public void crearGrupo(View view)
-    {
-
-    }
-
-    public void verDatos(View view)
-    {
-
-    }
-
-    public void empezar(View view)
-    {
-
-    }
-
-    public void salir(View view)
-    {
-
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
     }
 }
