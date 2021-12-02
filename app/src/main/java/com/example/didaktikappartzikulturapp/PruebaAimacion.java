@@ -37,17 +37,15 @@ public class PruebaAimacion extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
         layout = (LinearLayout) findViewById(R.id.animacion);
 
-       backgroundAnim = new MyAnim(layout, fondos[i]);
-       backgroundAnim.setDuration(125);
-       layout.startAnimation(backgroundAnim);
-       backgroundAnim.setAnimationListener(new Animation.AnimationListener() {
-           @Override
-           public void onAnimationStart(Animation animation) {
+        backgroundAnim = new MyAnim(layout, fondos[i]);
+        backgroundAnim.setDuration(125);
+        layout.startAnimation(backgroundAnim);
+        backgroundAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
 
-           }
-
-           @Override
-           public void onAnimationEnd(Animation animation) {
+            @Override
+            public void onAnimationEnd(Animation animation) {
                 if(i == fondos.length - 1) {
                     finish();
                 } else {
@@ -55,13 +53,10 @@ public class PruebaAimacion extends AppCompatActivity {
                 }
                 backgroundAnim.setBack(fondos[i]);
                 layout.startAnimation(backgroundAnim);
-           }
+            }
 
-           @Override
-           public void onAnimationRepeat(Animation animation) {
-
-           }
-       });
-
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
     }
 }
