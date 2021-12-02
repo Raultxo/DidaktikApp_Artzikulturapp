@@ -3,7 +3,6 @@ package com.example.didaktikappartzikulturapp;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +11,7 @@ public class PruebaAimacion extends AppCompatActivity {
 
     private LinearLayout layout;
     private MyAnim backgroundAnim;
-    private final int[] fondos = new int[] {
+    private static final int[] FONDOS = new int[] {
             R.drawable.fondo,
             R.drawable.fondo1,
             R.drawable.fondo2,
@@ -23,7 +22,7 @@ public class PruebaAimacion extends AppCompatActivity {
             R.drawable.fondo7,
             R.drawable.fondo8
     };
-    private int i;
+    private int posFondo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +31,11 @@ public class PruebaAimacion extends AppCompatActivity {
         getSupportActionBar().hide();
 
         View decorView = getWindow().getDecorView();
-        // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
         layout = (LinearLayout) findViewById(R.id.animacion);
 
-        backgroundAnim = new MyAnim(layout, fondos[i]);
+        backgroundAnim = new MyAnim(layout, FONDOS[posFondo]);
         backgroundAnim.setDuration(125);
         layout.startAnimation(backgroundAnim);
         backgroundAnim.setAnimationListener(new Animation.AnimationListener() {
@@ -46,12 +44,12 @@ public class PruebaAimacion extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                if(i == fondos.length - 1) {
+                if(posFondo == FONDOS.length - 1) {
                     finish();
                 } else {
-                    i++;
+                    posFondo++;
                 }
-                backgroundAnim.setBack(fondos[i]);
+                backgroundAnim.setFondo(FONDOS[posFondo]);
                 layout.startAnimation(backgroundAnim);
             }
 

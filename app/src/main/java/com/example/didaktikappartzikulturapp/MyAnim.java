@@ -7,20 +7,20 @@ import android.widget.LinearLayout;
 public class MyAnim extends Animation {
 
     private final LinearLayout view;
-    private int targetBackGround;
+    private int valorIntDrawable;
 
-
-    public MyAnim(LinearLayout view, int tagetBackGroundColor) {
+    public MyAnim(LinearLayout view, int valorIntDrawable) {
         this.view = view;
-        this.targetBackGround = tagetBackGroundColor;
+        this.valorIntDrawable = valorIntDrawable;
     }
+
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation t) {
         super.applyTransformation(interpolatedTime, t);
-        view.setBackgroundResource(targetBackGround);
+        view.setBackgroundResource(valorIntDrawable);
     }
 
-    public void setBack(int back) {
-        this.targetBackGround = back;
+    public void setFondo(int fondo) {
+        this.valorIntDrawable = fondo;
     }
 }
