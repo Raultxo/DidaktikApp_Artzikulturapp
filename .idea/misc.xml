@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24003623188405798" />
-        <entry key="app/src/main/res/layout/dialogo_grupo_nuevo.xml" value="0.32472826086956524" />
-        <entry key="app/src/main/res/layout/prueba_animacion.xml" value="0.32472826086956524" />
+        <entry key="app/src/main/res/layout/dialogo_grupo_nuevo.xml" value="0.1778115501519757" />
+        <entry key="app/src/main/res/layout/fragment_grupo.xml" value="0.365625" />
+        <entry key="app/src/main/res/layout/fragment_listado_grupos.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/listitem_grupo.xml" value="0.365625" />
       </map>
     </option>
   </component>
