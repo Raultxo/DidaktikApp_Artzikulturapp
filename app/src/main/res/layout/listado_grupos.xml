@@ -30,16 +30,6 @@
 
 
     <!-- lista de grupos -->
-    <Button
-        android:id="@+id/btnJugar"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:insetBottom="0dp"
-        android:text="Jokatu"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
