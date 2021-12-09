@@ -12,7 +12,8 @@
         android:text="GRUPO NUEVO"
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/lblTitulo"/>
+        android:id="@+id/lblTitulo"
+        android:textColor="@color/black"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +22,8 @@
         android:layout_margin="20dp"
         android:text="Nombre"
         android:textSize="15dp"
-        android:id="@+id/lblNombre"/>
+        android:id="@+id/lblNombre"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/txtGrupo"
