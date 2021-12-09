@@ -1,15 +1,21 @@
 package com.example.didaktikappartzikulturapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnEmpezar;
+    private ImageView img;
+    private String codigo = "";
+    private ConstraintLayout principal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +32,37 @@ public class MainActivity extends AppCompatActivity {
         btnEmpezar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
-                startActivity(intent);
-                overridePendingTransition(0,0);
+                if(codigo.equals("aabbcdcd")) {
+                    Toast.makeText(MainActivity.this, "UWU", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
+                    startActivity(intent);
+                }
+             //   overridePendingTransition(0,0);
+            }
+        });
+        principal = (ConstraintLayout) findViewById(R.id.principal);
+        principal.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+
+            @Override
+            public void onSwipeTop() {
+                codigo += "a";
+            }
+
+            @Override
+            public void onSwipeBottom() {
+                codigo += "b";
+            }
+
+            @Override
+            public void onSwipeLeft() {
+                codigo += "c";
+            }
+
+            @Override
+            public void onSwipeRight() {
+                codigo += "d";
             }
         });
     }
