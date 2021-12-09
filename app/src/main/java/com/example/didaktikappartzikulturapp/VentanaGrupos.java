@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -37,15 +38,27 @@ public class VentanaGrupos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listado_grupos);
 
+        getSupportActionBar().hide();
+
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
+        btnJugar = (Button) findViewById(R.id.btnJugar);
+        btnJugar.setEnabled(false);
+
         // lista de grupos
         AdaptadorGrupos adaptador=new AdaptadorGrupos(this,datos);
         lista = (ListView) findViewById(R.id.lstListado);
         lista.setAdapter(adaptador);
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                btnJugar.setEnabled(true);
+            }
+        });
 
-
-        // botones
-        // si hay grupo seleccionado inicia la animacion
-        btnJugar = (Button) findViewById(R.id.btnJugar);
         btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

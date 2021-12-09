@@ -3,16 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Elena^^/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Elena^^/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/fragment_grupo.xml" value="0.209375" />
-        <entry key="..\:/Users/Elena^^/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/fragment_listado_grupos.xml" value="0.209375" />
-        <entry key="..\:/Users/Elena^^/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/listado_grupos.xml" value="0.25" />
-        <entry key="..\:/Users/Elena^^/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/listitem_grupo.xml" value="0.209375" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24003623188405798" />
         <entry key="app/src/main/res/layout/dialogo_grupo_nuevo.xml" value="0.1778115501519757" />
         <entry key="app/src/main/res/layout/fragment_grupo.xml" value="0.365625" />
         <entry key="app/src/main/res/layout/fragment_listado_grupos.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/listado_grupos.xml" value="0.20108695652173914" />
         <entry key="app/src/main/res/layout/listitem_grupo.xml" value="0.365625" />
+        <entry key="app/src/main/res/layout/prueba_animacion.xml" value="0.2033514492753623" />
       </map>
     </option>
   </component>
