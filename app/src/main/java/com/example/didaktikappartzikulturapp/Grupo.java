@@ -16,4 +16,5 @@ public class Grupo {
 
     public int getActividad(){ return actividad; }
     public void setActividad(int acti){ actividad=acti; }
+
 }

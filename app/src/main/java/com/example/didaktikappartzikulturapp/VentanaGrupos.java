@@ -1,6 +1,7 @@
 package com.example.didaktikappartzikulturapp;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,10 +15,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-public class VentanaGrupos extends AppCompatActivity {
+public class VentanaGrupos extends AppCompatActivity implements DialogoGrupoNuevo.OnDialogoConfirmacionListener{
 
     //dialogos
     private FragmentManager fragmentManager;
@@ -31,6 +33,17 @@ public class VentanaGrupos extends AppCompatActivity {
 
     //botones
     private Button btnJugar,btnVolver,btnNuevoGrup;
+
+    /////  Metodos del dialogo
+    public void onPossitiveButtonClick()
+    {
+        String nombre = dialogo.getTxtGrupo().toString();
+        // se aniadira un nuevo grupo
+    }
+    public void onNegativeButtonClick()
+    {
+
+    }
 
 
     @Override
