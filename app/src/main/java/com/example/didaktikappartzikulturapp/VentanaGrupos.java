@@ -64,6 +64,7 @@ public class VentanaGrupos extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(VentanaGrupos.this, PruebaAimacion.class);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 

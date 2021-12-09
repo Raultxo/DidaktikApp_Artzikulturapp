@@ -46,6 +46,7 @@ public class PruebaAimacion extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 if(posFondo == FONDOS.length - 1) {
                     finish();
+                    overridePendingTransition(0,0);
                 } else {
                     posFondo++;
                 }

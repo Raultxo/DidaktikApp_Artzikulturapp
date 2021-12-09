@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
     }
