@@ -27,24 +27,21 @@ public class VentanaGrupos extends AppCompatActivity implements DialogoGrupoNuev
 
     //lista
     private ListView lista;
-    final Grupo[] datos = new Grupo[] { new Grupo("Grupo 1",1),
-                                        new Grupo("Grupo 2",2),
-                                        new Grupo("Grupo 3",3)};
+    final Grupo[] datos = new Grupo[] {
+            new Grupo("Grupo 1",1),
+            new Grupo("Grupo 2",2),
+            new Grupo("Grupo 3",3)
+    };
 
     //botones
     private Button btnJugar,btnVolver,btnNuevoGrup;
 
-    /////  Metodos del dialogo
-    public void onPossitiveButtonClick()
-    {
+    public void onPossitiveButtonClick() {
         String nombre = dialogo.getTxtGrupo().toString();
-        // se aniadira un nuevo grupo
     }
-    public void onNegativeButtonClick()
-    {
+    public void onNegativeButtonClick() {
 
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +84,6 @@ public class VentanaGrupos extends AppCompatActivity implements DialogoGrupoNuev
             @Override
             public void onClick(View view) {
                 fragmentManager = getSupportFragmentManager();
-                //Dialogo
                 dialogo = new DialogoGrupoNuevo();
                 dialogo.show(fragmentManager,"Dialogo");
             }
@@ -105,16 +101,13 @@ public class VentanaGrupos extends AppCompatActivity implements DialogoGrupoNuev
         });
     }
 
-    class AdaptadorGrupos extends ArrayAdapter <Grupo>
-    {
-        public AdaptadorGrupos(@NonNull Context context, Grupo[] datos)
-        {
+    class AdaptadorGrupos extends ArrayAdapter <Grupo> {
+        public AdaptadorGrupos(@NonNull Context context, Grupo[] datos) {
             super(context, R.layout.listitem_grupo, datos);
         }
         @NonNull
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
-        {
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             View item = inflater.inflate(R.layout.listitem_grupo, null);
             TextView lblNombre = (TextView)item.findViewById(R.id.lblNomGrupo);
@@ -129,11 +122,11 @@ public class VentanaGrupos extends AppCompatActivity implements DialogoGrupoNuev
         if (hasFocus) {
             getWindow().getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
 }

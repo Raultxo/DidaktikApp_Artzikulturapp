@@ -22,8 +22,7 @@ public class DialogoGrupoNuevo extends DialogFragment {
 
     @NonNull
     @Override
-    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState)
-    {
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         //Creamos Dialog
         AlertDialog.Builder builder =new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -50,21 +49,17 @@ public class DialogoGrupoNuevo extends DialogFragment {
         return dialog;
     }
 
-
     //Interfaz para los botones Aceptar y Cancelar
-    public interface OnDialogoConfirmacionListener
-    {
+    public interface OnDialogoConfirmacionListener {
         void onPossitiveButtonClick(); //Eventos Botón Positivos
         void onNegativeButtonClick();  //Eventos Botón Negativo
     }
 
     //interfaz para evitar el error
     @Override
-    public void onAttach(Context context)
-    {
+    public void onAttach(Context context) {
         super.onAttach(context);
-        try
-        {
+        try {
             listener = (DialogoGrupoNuevo.OnDialogoConfirmacionListener) context;
         }
         catch (ClassCastException e) {
