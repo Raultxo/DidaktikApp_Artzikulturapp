@@ -3,6 +3,7 @@ package com.example.didaktikappartzikulturapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private String codigo = "";
     private ConstraintLayout principal;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,14 +34,16 @@ public class MainActivity extends AppCompatActivity {
         btnEmpezar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.out.println(codigo);
                 if(codigo.equals("aabbcdcd")) {
-                    Toast.makeText(MainActivity.this, "UWU", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
+                    startActivity(intent);
                 }
                 else {
                     Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
                     startActivity(intent);
                 }
-             //   overridePendingTransition(0,0);
             }
         });
         principal = (ConstraintLayout) findViewById(R.id.principal);

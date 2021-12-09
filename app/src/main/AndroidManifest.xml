@@ -24,6 +24,9 @@
         <activity android:name=".VentanaGrupos">
 
         </activity>
+        <activity android:name=".VentanaDeveloper">
+
+        </activity>
     </application>
 
 </manifest>
