@@ -28,36 +28,94 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-
-    <!-- lista de grupos -->
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.1"
+    <Button
+        android:id="@+id/actividad1"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:text="Actividad1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:onClick="abrirActividad"/>
 
-        <ListView
-            android:id="@+id/lstListado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawSelectorOnTop="false"
-            android:listSelector="@color/itemLista" />
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="379dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="16dp"
-        android:text="LISTA ACTIVIDADES"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    <Button
+        android:id="@+id/actividad2"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="Actividad2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/actividad1"
+        android:onClick="abrirActividad"/>
+
+    <Button
+        android:id="@+id/actividad3"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Actividad3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actividad2"
+        android:onClick="abrirActividad"/>
+
+    <Button
+        android:id="@+id/actividad4"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Actividad4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actividad3"
+        android:onClick="abrirActividad"/>
+
+    <Button
+        android:id="@+id/actividad5"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Actividad5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actividad4"
+        android:onClick="abrirActividad"/>
+
+    <Button
+        android:id="@+id/actividad6"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Actividad6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actividad5"
+        android:onClick="abrirActividad"/>
+
+    <Button
+        android:id="@+id/actividad7"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Actividad7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actividad6"
+        android:onClick="abrirActividad"/>
+
+    <Button
+        android:id="@+id/actividad8"
+        android:layout_width="281dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Actividad8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actividad7"
+        android:onClick="abrirActividad"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

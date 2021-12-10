@@ -27,6 +27,10 @@
         <activity android:name=".VentanaDeveloper">
 
         </activity>
+
+        <activity android:name=".Actividad1">
+
+        </activity>
     </application>
 
 </manifest>

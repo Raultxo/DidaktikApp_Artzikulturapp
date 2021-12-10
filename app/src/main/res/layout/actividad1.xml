@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.1"
+        android:background="@color/color1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_revert"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Atzera"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="109dp"
+        android:layout_height="109dp"
+        android:layout_gravity="center"
+        android:background="@color/color1"
+        android:backgroundTint="@color/color1"
+        app:cardCornerRadius="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+
+        <ImageButton
+            android:id="@+id/sharepic"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/color1"
+            android:src="@android:drawable/ic_media_play"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:onClick="reproducirAudio"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="148dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/juglarea" />
+</androidx.constraintlayout.widget.ConstraintLayout>
