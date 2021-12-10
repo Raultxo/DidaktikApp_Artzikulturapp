@@ -28,7 +28,7 @@ public class DialogoGrupoNuevo extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialogo_grupo_nuevo, null);
         builder.setView(dialogView)
-               .setPositiveButton("Aceptar",new DialogInterface.OnClickListener() {
+                .setPositiveButton("Aceptar",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         listener.onPossitiveButtonClick();
                         dialog.cancel();
@@ -43,6 +43,7 @@ public class DialogoGrupoNuevo extends DialogFragment {
 
 
         txtGrupo = dialogView.findViewById(R.id.txtGrupo);
+
 
         Dialog dialog =  builder.create();
         dialog.setCanceledOnTouchOutside(false);
