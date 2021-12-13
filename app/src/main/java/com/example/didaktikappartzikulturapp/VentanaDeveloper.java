@@ -68,8 +68,8 @@ public class VentanaDeveloper extends AppCompatActivity {
         }
 
         if(v.equals(btnAct2)){
-            //Intent intent = new Intent(VentanaDeveloper.this, Actividad2.class);
-            //startActivity(intent);
+            Intent intent = new Intent(VentanaDeveloper.this, Actividad2.class);
+            startActivity(intent);
         }
 
         if(v.equals(btnAct3)){

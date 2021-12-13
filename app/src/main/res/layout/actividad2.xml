@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -28,24 +29,369 @@ android:layout_height="match_parent">
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-
-
-    <fragment
-        class="com.example.didaktikappartzikulturapp.JuegoTexto2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="28dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:text="audio"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout2"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+            android:id="@+id/btnCorregir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="22dp"
+            android:text="corregir"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout2"/>
+
+    <!-- TEXTO -->
+    <RelativeLayout
+        android:id="@+id/textoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAudio"
+        android:padding="13dp">
+
+            <TextView
+                android:id="@+id/lbl1"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Herriko erdigunetik hurbil dago "/>
+
+        <EditText
+            android:id="@+id/resp1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lbl1"
+            android:layout_toRightOf="@+id/lbl1"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text=" hau,"
+                android:layout_alignTop="@+id/resp1"
+                android:layout_toRightOf="@+id/resp1"/>
+
+            <TextView
+                android:id="@+id/lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl1"
+                android:layout_marginTop="4dp"
+                android:text="askotan bisitatzen duzue zuek? Badakizue nondik" />
+
+            <TextView
+                android:id="@+id/lbl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl"
+                android:layout_marginTop="4dp"
+                android:text="datorren santutegiaren izena?... Kondairak dioenez, " />
+
+            <TextView
+                android:id="@+id/lbl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl2"
+                android:text="santutegiaren "/>
+
+        <EditText
+            android:id="@+id/resp2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lbl3"
+            android:layout_alignTop="@+id/lbl3"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/lbl4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="zegoen"
+                android:layout_below="@+id/lbl3"/>
+
+        <EditText
+            android:id="@+id/resp3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lbl4"
+            android:layout_alignTop="@+id/lbl4"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/resp3"
+                android:layout_alignTop="@+id/resp3"
+                android:text="-emakume bati zuhaitz baten "/>
+
+            <TextView
+                android:id="@+id/lbl5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl4"
+                android:text="zulotxoan Ama " />
+
+        <EditText
+            android:id="@+id/resp4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lbl5"
+            android:layout_toRightOf="@+id/lbl5"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/resp4"
+                android:layout_alignTop="@+id/resp4"
+                android:text="agertu zitzaiolako."/>
+
+            <TextView
+                android:id="@+id/lbl6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl5"
+                android:text="Imagina dezakezue? Denboraren poderioz," />
+
+        <EditText
+            android:id="@+id/resp5"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl6"
+            android:text="asdnkjn"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/lbl7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/resp5"
+                android:layout_alignTop="@+id/resp5"
+                android:text="garrantzia gero eta handiagoa izan" />
+
+            <TextView
+                android:id="@+id/lbl8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/resp5"
+                android:text="zen eta" />
+
+        <EditText
+            android:id="@+id/resp6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lbl8"
+            android:layout_toRightOf="@+id/lbl8"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_alignTop="@+id/resp6"
+                android:layout_toRightOf="@+id/resp6"
+                android:text="batzuk aurrerago bere alboan" />
+
+            <TextView
+                android:id="@+id/lbl9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl8"
+                android:text="beste" />
+
+        <EditText
+            android:id="@+id/resp7"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lbl9"
+            android:layout_toRightOf="@+id/lbl9"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/resp7"
+                android:layout_alignTop="@+id/resp7"
+                android:text="bat egiten hasi ziren. Ikusten"/>
+
+            <TextView
+                android:id="@+id/lbl10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl9"
+                android:text="duzuenez" />
+
+        <EditText
+            android:id="@+id/resp8"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lbl10"
+            android:layout_toRightOf="@+id/lbl10"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/resp8"
+                android:layout_alignTop="@+id/resp8"
+                android:text="aparta dago santutegi "/>
+
+            <TextView
+                android:id="@+id/lbl11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl10"
+                android:text="honetan," />
+
+        <EditText
+            android:id="@+id/resp9"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lbl11"
+            android:layout_toRightOf="@+id/lbl11"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/resp9"
+                android:layout_alignTop="@+id/resp9"
+                android:text="arkuk osatuta. Santutegiaren"/>
+
+            <TextView
+                android:id="@+id/lbl12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl11"
+                android:text="barrualdean Tenplete sagrario bat dauka , zeinetan" />
+
+            <TextView
+                android:id="@+id/lbl13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl12"
+                android:text="Ama Birjinaren egurrezko " />
+
+        <EditText
+            android:id="@+id/resp10"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lbl13"
+            android:layout_toRightOf="@+id/lbl13"
+            android:textColor="@color/white"
+            android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/resp10"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/resp10"
+                android:text="bikaina" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/lbl13"
+                android:text="dago, jada ikusi duzue?"/>
+    </RelativeLayout>
+
+  <TableLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/textoLayout"
+      android:padding="13dp"
+      android:layout_marginTop="20dp">
+
+      <TableRow>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="santutegi"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="Birjina"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="lau"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="mende"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="aterpe"/>
+      </TableRow>
+      <TableRow>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="tenpluaren"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="eraikin"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="artzain"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="eskultura"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                  android:text="alboan"/>
+      </TableRow>
+  </TableLayout>
+
+</RelativeLayout>
