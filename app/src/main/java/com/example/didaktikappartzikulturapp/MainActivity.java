@@ -37,10 +37,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
                     startActivity(intent);
+                    codigo = "";
                 }
                 else {
                     Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
                     startActivity(intent);
+                    codigo = "";
                 }
             }
         });
