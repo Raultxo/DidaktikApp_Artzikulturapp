@@ -39,17 +39,17 @@ public class Actividad1 extends AppCompatActivity {
             }
         });
 
+        mp = MediaPlayer.create(Actividad1.this, R.raw.audio1);
         btnAudio = (ImageButton) findViewById(R.id.btnAudio);
-        btnVolver.setOnClickListener(new View.OnClickListener() {
+        btnAudio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp = MediaPlayer.create(Actividad1.this, R.raw.audio1);
                 if(mp.isPlaying()){
                     mp.pause();
-                    btnAudio.setImageIcon(null);
+                    btnAudio.setImageResource(android.R.drawable.ic_media_play);
                 }else{
                     mp.start();
-                    btnAudio.setImageIcon(null);
+                    btnAudio.setImageResource(android.R.drawable.ic_media_pause);
                 }
 
             }
