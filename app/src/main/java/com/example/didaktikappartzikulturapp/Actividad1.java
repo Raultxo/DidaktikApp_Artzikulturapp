@@ -1,18 +1,15 @@
 package com.example.didaktikappartzikulturapp;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class Actividad1 extends AppCompatActivity {
 
-    private Button btnAudio;
+    private Button btnAudio, btnVolver;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -25,6 +22,16 @@ public class Actividad1 extends AppCompatActivity {
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(uiOptions);
+
+        // vuelve a la ventana principal
+        btnVolver = (Button) findViewById(R.id.btnVolver);
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                overridePendingTransition(0,0);
+            }
+        });
     }
 
     @Override

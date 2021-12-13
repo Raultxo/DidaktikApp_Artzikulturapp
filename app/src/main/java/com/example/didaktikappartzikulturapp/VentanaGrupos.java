@@ -94,8 +94,7 @@ public class VentanaGrupos extends AppCompatActivity implements DialogoGrupoNuev
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VentanaGrupos.this, MainActivity.class);
-                startActivity(intent);
+                finish();
                 overridePendingTransition(0,0);
             }
         });

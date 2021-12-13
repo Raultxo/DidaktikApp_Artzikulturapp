@@ -1,21 +1,10 @@
 package com.example.didaktikappartzikulturapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
 public class VentanaDeveloper extends AppCompatActivity {
 
@@ -40,8 +29,7 @@ public class VentanaDeveloper extends AppCompatActivity {
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VentanaDeveloper.this, MainActivity.class);
-                startActivity(intent);
+                finish();
                 overridePendingTransition(0,0);
             }
         });
