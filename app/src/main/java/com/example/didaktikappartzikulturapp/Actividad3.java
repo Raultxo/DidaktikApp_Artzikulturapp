@@ -5,18 +5,25 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Actividad3 extends AppCompatActivity {
 
-    private Button btnAudio, btnVolver;
+    private String texto = "Herri polit honetako biztanleek, alegia, zuek, produktuak Erdi Aroan nola saltzen eta trukatzen zituzten urtero irudikatzen duzue. Dakizuenez, azoka bitxi hau udaren amaieran ospatzen da, baina badakizue zergatik momentu horretan? Uda amaiera, uzta biltzeko garaia izan ohi zen, hortaz, hainbat zonaldetako produktuen elkartrukea egiten zuten Artziniegan bertan.\n" +
+            "Artziniegako kale guztiak apaintzen dituzte, iraganera bost mende bidaiatzeko. Gainera, kaleetan zehar artisautza eta gastronomiako erakustoki desberdinak daude, Erdi Arora hegaz eramaten gaituztenak. Horrez gain, kaleetatik pertsonaia desberdinak topa daitezke: zaldunak, nobleak, bufoiak, malabaristak, artisauak, elizgizonak, titiriteroak, trobadoreak, dontzeilak, perkusionistak, zingaroak, juglareak, eta abar. Zuei zein pertsonaietaz mozorratzea gustatzen zaizue? \n"
+    private String[] textoArray = texto.split("\\s");
+    private Button btnVolver;
+    private ImageButton btnAudio;
+    private TextView textView;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad1);
+        setContentView(R.layout.actividad3);
         getSupportActionBar().hide();
 
         View decorView = getWindow().getDecorView();
@@ -31,6 +38,18 @@ public class Actividad3 extends AppCompatActivity {
             public void onClick(View view) {
                 finish();
                 overridePendingTransition(0,0);
+            }
+        });
+
+        int count = 0;
+        textView = (TextView) findViewById(R.id.textView3);
+        btnAudio = (ImageButton) findViewById(R.id.btnAudio);
+        btnAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(count < textoArray.length) {
+
+                }
             }
         });
     }
@@ -50,7 +69,7 @@ public class Actividad3 extends AppCompatActivity {
     }
 
     public void reproducirAudio(View v){
-        MediaPlayer mp = MediaPlayer.create(this, R.raw.audio1);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.audio3);
         mp.start();
     }
 
