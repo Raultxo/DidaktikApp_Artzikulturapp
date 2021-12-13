@@ -33,6 +33,12 @@
         <activity android:name=".Actividad1">
 
         </activity>
+        <activity android:name=".Actividad2">
+
+        </activity>
+        <activity android:name=".Actividad3">
+
+        </activity>
     </application>
 
 </manifest>
