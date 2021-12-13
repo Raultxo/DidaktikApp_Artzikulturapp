@@ -5,17 +5,23 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Actividad1 extends AppCompatActivity {
 
     private Button btnVolver;
     private ImageButton btnAudio;
     private MediaPlayer mp;
+    private MediaObserver observer = null;
+    private SeekBar progress;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -50,8 +56,39 @@ public class Actividad1 extends AppCompatActivity {
                 }else{
                     mp.start();
                     btnAudio.setImageResource(android.R.drawable.ic_media_pause);
+                    observer = new MediaObserver();
+                    new Thread(observer).start();
                 }
 
+            }
+        });
+
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp)
+            {
+                btnAudio.setImageResource(android.R.drawable.ic_popup_sync);
+                observer.stop();
+            }
+        });
+
+        progress = (SeekBar) findViewById(R.id.progress);
+        progress.setMax(mp.getDuration());
+
+        progress.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                mp.seekTo(progress.getProgress());
             }
         });
     }
@@ -70,4 +107,29 @@ public class Actividad1 extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.stop();
+    }
+
+    private class MediaObserver implements Runnable {
+        private AtomicBoolean stop = new AtomicBoolean(false);
+
+        public void stop() {
+            stop.set(true);
+        }
+
+        @Override
+        public void run() {
+            while (!stop.get()) {
+                progress.setProgress(mp.getCurrentPosition());
+                try{
+                    Thread.sleep(200);
+                }catch (Exception e){
+
+                }
+            }
+        }
+    }
 }

@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnEmpezar;
-    private String codigo = "";
+    private String codigo = "aabbcdcd";
     private ConstraintLayout principal;
 
     @SuppressLint("ClickableViewAccessibility")
