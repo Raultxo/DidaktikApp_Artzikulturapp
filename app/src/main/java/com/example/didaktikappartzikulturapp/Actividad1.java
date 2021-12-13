@@ -1,6 +1,7 @@
 package com.example.didaktikappartzikulturapp;
 
 import android.annotation.SuppressLint;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,7 +50,8 @@ public class Actividad1 extends AppCompatActivity {
     }
 
     public void reproducirAudio(View v){
-
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.audio1);
+        mp.start();
     }
 
 }
