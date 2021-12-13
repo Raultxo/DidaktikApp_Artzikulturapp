@@ -42,13 +42,12 @@
 
 
         <ImageButton
-            android:id="@+id/sharepic"
+            android:id="@+id/btnAudio"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:background="@color/color1"
             android:src="@android:drawable/ic_media_play"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:onClick="reproducirAudio"/>
+            tools:ignore="SpeakableTextPresentCheck"/>
 
     </androidx.cardview.widget.CardView>
 

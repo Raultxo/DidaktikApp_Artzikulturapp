@@ -1,16 +1,21 @@
 package com.example.didaktikappartzikulturapp;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Actividad1 extends AppCompatActivity {
 
-    private Button btnAudio, btnVolver;
+    private Button btnVolver;
+    private ImageButton btnAudio;
+    private MediaPlayer mp;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -33,6 +38,22 @@ public class Actividad1 extends AppCompatActivity {
                 overridePendingTransition(0,0);
             }
         });
+
+        btnAudio = (ImageButton) findViewById(R.id.btnAudio);
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp = MediaPlayer.create(Actividad1.this, R.raw.audio1);
+                if(mp.isPlaying()){
+                    mp.pause();
+                    btnAudio.setImageIcon(null);
+                }else{
+                    mp.start();
+                    btnAudio.setImageIcon(null);
+                }
+
+            }
+        });
     }
 
     @Override
@@ -47,11 +68,6 @@ public class Actividad1 extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
-    }
-
-    public void reproducirAudio(View v){
-        MediaPlayer mp = MediaPlayer.create(this, R.raw.audio1);
-        mp.start();
     }
 
 }
