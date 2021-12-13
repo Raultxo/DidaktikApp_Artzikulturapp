@@ -113,6 +113,13 @@ public class Actividad1 extends AppCompatActivity {
         mp.stop();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();;
+        btnAudio.setImageResource(android.R.drawable.ic_media_play);
+        mp = MediaPlayer.create(Actividad1.this, R.raw.audio1);
+    }
+
     private class MediaObserver implements Runnable {
         private AtomicBoolean stop = new AtomicBoolean(false);
 
