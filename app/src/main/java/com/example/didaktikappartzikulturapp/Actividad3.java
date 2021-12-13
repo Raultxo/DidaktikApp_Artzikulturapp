@@ -3,6 +3,8 @@ package com.example.didaktikappartzikulturapp;
 import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,7 +16,7 @@ public class Actividad3 extends AppCompatActivity {
 
     private String texto = "Herri polit honetako biztanleek, alegia, zuek, produktuak Erdi Aroan nola saltzen eta trukatzen zituzten urtero irudikatzen duzue. Dakizuenez, azoka bitxi hau udaren amaieran ospatzen da, baina badakizue zergatik momentu horretan? Uda amaiera, uzta biltzeko garaia izan ohi zen, hortaz, hainbat zonaldetako produktuen elkartrukea egiten zuten Artziniegan bertan.\n" +
             "Artziniegako kale guztiak apaintzen dituzte, iraganera bost mende bidaiatzeko. Gainera, kaleetan zehar artisautza eta gastronomiako erakustoki desberdinak daude, Erdi Arora hegaz eramaten gaituztenak. Horrez gain, kaleetatik pertsonaia desberdinak topa daitezke: zaldunak, nobleak, bufoiak, malabaristak, artisauak, elizgizonak, titiriteroak, trobadoreak, dontzeilak, perkusionistak, zingaroak, juglareak, eta abar. Zuei zein pertsonaietaz mozorratzea gustatzen zaizue? \n";
-    private String[] textoArray = texto.split("\\s");
+    private String[] textoArray = texto.split("");
     private Button btnVolver;
     private ImageButton btnAudio;
     private TextView textView;
@@ -46,6 +48,11 @@ public class Actividad3 extends AppCompatActivity {
         btnAudio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                for(int i = 0; i < textoArray.length; i++) {
+                    textView.append(textoArray[i]);
+                }
+
             }
         });
     }
