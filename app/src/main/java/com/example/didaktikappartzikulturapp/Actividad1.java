@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Actividad1 extends AppCompatActivity {
 
-    private Button btnVolver;
+    private Button btnVolver, btnContinuar;
     private ImageButton btnAudio;
     private MediaPlayer mp;
     private MediaObserver observer = null;
@@ -35,6 +35,14 @@ public class Actividad1 extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(uiOptions);
 
+        btnContinuar = (Button) findViewById(R.id.btnContinuar);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("Continuar");
+            }
+        });
+
         // vuelve a la ventana principal
         btnVolver = (Button) findViewById(R.id.btnVolver);
         btnVolver.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +55,8 @@ public class Actividad1 extends AppCompatActivity {
 
         mp = MediaPlayer.create(Actividad1.this, R.raw.audio1);
         btnAudio = (ImageButton) findViewById(R.id.btnAudio);
+        observer = new MediaObserver();
+        new Thread(observer).start();
         btnAudio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,19 +66,15 @@ public class Actividad1 extends AppCompatActivity {
                 }else{
                     mp.start();
                     btnAudio.setImageResource(android.R.drawable.ic_media_pause);
-                    observer = new MediaObserver();
-                    new Thread(observer).start();
+                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mpa)
+                        {
+                            btnAudio.setImageResource(android.R.drawable.ic_popup_sync);
+                            btnContinuar.setEnabled(true);
+                        }
+                    });
                 }
-
-            }
-        });
-
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp)
-            {
-                btnAudio.setImageResource(android.R.drawable.ic_popup_sync);
-                observer.stop();
             }
         });
 
@@ -130,11 +136,13 @@ public class Actividad1 extends AppCompatActivity {
         @Override
         public void run() {
             while (!stop.get()) {
-                progress.setProgress(mp.getCurrentPosition());
-                try{
-                    Thread.sleep(200);
-                }catch (Exception e){
+                if(mp.isPlaying()){
+                    progress.setProgress(mp.getCurrentPosition());
+                    try{
+                        Thread.sleep(200);
+                    }catch (Exception e){
 
+                    }
                 }
             }
         }
