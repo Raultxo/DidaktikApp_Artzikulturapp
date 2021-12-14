@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnEmpezar;
-    private String codigo = "aabbcdcd";
+    private String codigo = "";
     private ConstraintLayout principal;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -35,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println(codigo);
                 if(codigo.equals("aabbcdcd")) {
                     Toast.makeText(MainActivity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
+                    //Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
+                    Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
                     startActivity(intent);
                     codigo = "";
                 }
                 else {
-                    Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
+                    //Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
+                    Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
                     startActivity(intent);
                     codigo = "";
                 }
@@ -84,5 +86,4 @@ public class MainActivity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
-
 }
