@@ -10,45 +10,41 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnEmpezar;
     private String codigo = "";
-    private ConstraintLayout principal;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         View decorView = getWindow().getDecorView();
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(uiOptions);
 
-        btnEmpezar = (Button) findViewById(R.id.btnEmpezar);
-        btnEmpezar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.out.println(codigo);
-                if(codigo.equals("aabbcdcd")) {
-                    Toast.makeText(MainActivity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
-                    Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
-                    startActivity(intent);
-                    codigo = "";
-                }
-                else {
-                    //Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
-                    Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
-                    startActivity(intent);
-                    codigo = "";
-                }
+        Button btnEmpezar = findViewById(R.id.btnEmpezar);
+        btnEmpezar.setOnClickListener(view -> {
+            System.out.println(codigo);
+            if(codigo.equals("aabbcdcd")) {
+                Toast.makeText(MainActivity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
+                Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
+                startActivity(intent);
             }
+            else {
+                //Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
+                Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
+                startActivity(intent);
+            }
+            codigo = "";
         });
-        principal = (ConstraintLayout) findViewById(R.id.principal);
+        ConstraintLayout principal = findViewById(R.id.principal);
         principal.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
 
             @Override

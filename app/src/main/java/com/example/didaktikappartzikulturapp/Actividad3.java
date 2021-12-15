@@ -1,6 +1,7 @@
 package com.example.didaktikappartzikulturapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -57,7 +58,8 @@ public class Actividad3 extends AppCompatActivity {
         // Boton para continuar e ir a la sopa de letras
         btnContinuar = findViewById(R.id.btnContinuar);
         btnContinuar.setOnClickListener(view -> {
-
+            Intent intent = new Intent(Actividad3.this, SopaDeLetras.class);
+            startActivity(intent);
         });
 
         // Boton para volver a la ventana principal
