@@ -2,21 +2,21 @@ package com.example.didaktikappartzikulturapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class SopaDeLetras extends AppCompatActivity {
 
     private GridView sopa;
-    private String[] letras = new String[] {
+    private final String[] letras = new String[] {
             "Y","X","R","E","L","I","Z","G","I","Z","O","N","A","N",
             "T","I","R","Z","A","L","D","U","N","A","B","K","W","E",
             "F","J","J","U","G","L","A","R","E","A","C","P","W","P",
@@ -33,6 +33,7 @@ public class SopaDeLetras extends AppCompatActivity {
             "F","D","O","N","T","Z","E","I","L","A","Z","L","W","I"
     };
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,16 +49,23 @@ public class SopaDeLetras extends AppCompatActivity {
 
         sopa = findViewById(R.id.sopa);
 
-        ArrayAdapter<String> listaAdapter = new ArrayAdapter<String>(this, R.layout.textview_sopa, letras);
+        ArrayAdapter<String> listaAdapter = new ArrayAdapter<>(this, R.layout.textview_sopa, letras);
         sopa.setAdapter(listaAdapter);
 
-        sopa.setOnDragListener(new View.OnDragListener() {
-            @Override
-            public boolean onDrag(View view, DragEvent dragEvent) {
-                System.out.println("UWU");
-                return false;
+        sopa.setOnTouchListener((view, motionEvent) -> {
+            System.out.println("Empieza");
+            for(int i = 0; i < sopa.getChildCount(); i++) {
+                View v = sopa.getChildAt(i);
+                Rect outRecto = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                if(outRecto.contains((int)motionEvent.getX(), (int)motionEvent.getY())) {
+                    System.out.println(((TextView) v).getText());
+                }
             }
+            System.out.println("Termina");
+            return false;
         });
+
+
     }
 
     // Metodo para que quite la barra de navegacion, notificaciones, etc cuando se cambia el focus
@@ -74,4 +82,6 @@ public class SopaDeLetras extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
+
+
 }

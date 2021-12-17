@@ -93,6 +93,20 @@ public class Actividad3 extends AppCompatActivity {
 
         // TextView en el que va a aparecer el texto
         textView = findViewById(R.id.textView3);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.stop();
+        finish();
     }
 
     // Metodo para que quite la barra de navegacion, notificaciones, etc cuando se cambia el focus

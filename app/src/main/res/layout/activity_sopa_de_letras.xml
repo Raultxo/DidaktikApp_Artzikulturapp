@@ -6,6 +6,196 @@
     android:layout_height="match_parent"
     tools:context=".SopaDeLetras">
 
+    <TextView
+        android:id="@+id/hitzak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Hitzak:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sopa" />
+
+    <TextView
+        android:id="@+id/artisaua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Artisaua"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hitzak" />
+
+    <TextView
+        android:id="@+id/bufoia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Bufoia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/hitzak" />
+
+    <TextView
+        android:id="@+id/dontzeila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Dontzeila"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artisaua" />
+
+    <TextView
+        android:id="@+id/elizgizona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Elizgizona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/bufoia" />
+
+    <TextView
+        android:id="@+id/eskalea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Eskalea"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dontzeila" />
+
+    <TextView
+        android:id="@+id/juglarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Juglarea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/elizgizona" />
+
+    <TextView
+        android:id="@+id/legenarduna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Legenarduna"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eskalea" />
+
+    <TextView
+        android:id="@+id/magoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Magoa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/juglarea" />
+
+    <TextView
+        android:id="@+id/malabarista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Malabarista"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/legenarduna" />
+
+    <TextView
+        android:id="@+id/merkataria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Merkataria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/magoa" />
+
+    <TextView
+        android:id="@+id/noblea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Noblea"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/malabarista" />
+
+    <TextView
+        android:id="@+id/saltimbankia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Saltimbankia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/merkataria" />
+
+    <TextView
+        android:id="@+id/titiriteroa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Titiriteroa"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noblea" />
+
+    <TextView
+        android:id="@+id/trobadorea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Trobadorea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/saltimbankia" />
+
+    <TextView
+        android:id="@+id/zalduna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Zalduna"
+        app:layout_constraintEnd_toStartOf="@+id/hitzak"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titiriteroa" />
+
+    <TextView
+        android:id="@+id/zingaroa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Zingaroa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/hitzak"
+        app:layout_constraintTop_toBottomOf="@+id/trobadorea" />
+
+
+
+
+
     <GridView
         android:layout_margin="20sp"
         android:id="@+id/sopa"
@@ -20,5 +210,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </GridView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
