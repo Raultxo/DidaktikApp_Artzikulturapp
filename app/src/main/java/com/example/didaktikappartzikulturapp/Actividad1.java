@@ -1,6 +1,7 @@
 package com.example.didaktikappartzikulturapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
@@ -9,6 +10,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,7 @@ public class Actividad1 extends AppCompatActivity {
     private MediaPlayer mp;
     private MediaObserver observer = null;
     private SeekBar progress;
+    private ImageView imgArbol;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -35,11 +38,15 @@ public class Actividad1 extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(uiOptions);
 
+        imgArbol = (ImageView) findViewById(R.id.imgArbol);
+        imgArbol.setVisibility(View.INVISIBLE);
+
         btnContinuar = (Button) findViewById(R.id.btnContinuar);
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Continuar");
+                Intent intent = new Intent(Actividad1.this, Actividad1_puzzle.class);
+                startActivity(intent);
             }
         });
 
@@ -72,6 +79,7 @@ public class Actividad1 extends AppCompatActivity {
                         {
                             btnAudio.setImageResource(android.R.drawable.ic_popup_sync);
                             btnContinuar.setEnabled(true);
+                            imgArbol.setVisibility(View.VISIBLE);
                         }
                     });
                 }

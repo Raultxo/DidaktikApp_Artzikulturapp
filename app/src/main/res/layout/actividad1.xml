@@ -42,8 +42,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="109dp"
-        android:layout_height="109dp"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
         android:layout_gravity="center"
         android:background="@color/color1"
         android:backgroundTint="@color/color1"
@@ -56,22 +56,21 @@
         <ImageButton
             android:id="@+id/btnAudio"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="74dp"
             android:background="@color/color1"
             android:src="@android:drawable/ic_media_play"
-            tools:ignore="SpeakableTextPresentCheck"/>
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="148dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="131dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@drawable/juglarea" />
 
     <SeekBar
@@ -82,5 +81,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Encina de 500 años"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <ImageView
+        android:id="@+id/imgArbol"
+        android:layout_width="318dp"
+        android:layout_height="221dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress"
+        app:srcCompat="@drawable/artea_500_urteko" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
