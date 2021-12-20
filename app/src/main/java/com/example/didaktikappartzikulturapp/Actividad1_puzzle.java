@@ -118,6 +118,7 @@ public class Actividad1_puzzle extends AppCompatActivity {
         ArrayList<PuzzlePiece> pieces = new ArrayList<>(piecesNumber);
 
         // Get the scaled bitmap of the source image
+        Drawable img =  imageView.getDrawable();
         BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
 
@@ -126,9 +127,11 @@ public class Actividad1_puzzle extends AppCompatActivity {
         int scaledBitmapTop = dimensions[1];
         int scaledBitmapWidth = dimensions[2];
         int scaledBitmapHeight = dimensions[3];
+        System.out.println(dimensions[2]);
+        System.out.println(dimensions[3]);
 
-        int croppedImageWidth = scaledBitmapWidth - 2 * Math.abs(scaledBitmapLeft); 
-        int croppedImageHeight = scaledBitmapHeight - 2 * Math.abs(scaledBitmapTop);
+        int croppedImageWidth = scaledBitmapWidth - (2 * Math.abs(scaledBitmapLeft));
+        int croppedImageHeight = scaledBitmapHeight - (2 * Math.abs(scaledBitmapTop));
 
         Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, scaledBitmapWidth, scaledBitmapHeight, true);
         Bitmap croppedBitmap = Bitmap.createBitmap(scaledBitmap, Math.abs(scaledBitmapLeft), Math.abs(scaledBitmapTop), croppedImageWidth, croppedImageHeight);
@@ -155,7 +158,7 @@ public class Actividad1_puzzle extends AppCompatActivity {
                 // apply the offset to each piece
                 Bitmap pieceBitmap = Bitmap.createBitmap(croppedBitmap, xCoord - offsetX, yCoord - offsetY, pieceWidth + offsetX, pieceHeight + offsetY);
                 PuzzlePiece piece = new PuzzlePiece(getApplicationContext());
-                piece.setImageBitmap(pieceBitmap);
+                piece.setImageBitmap(croppedBitmap);
                 piece.xCoord = xCoord - offsetX + imageView.getLeft();
                 piece.yCoord = yCoord - offsetY + imageView.getTop();
                 piece.pieceWidth = pieceWidth + offsetX;
