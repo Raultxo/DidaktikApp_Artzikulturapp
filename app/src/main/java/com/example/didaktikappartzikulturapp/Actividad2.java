@@ -21,7 +21,7 @@ public class Actividad2 extends AppCompatActivity {
 
     private HashMap<EditText,String> respuestas;
     private Button btnCorregir, btnVolver, btnAudio;
-    private ImageView imgFin;
+    private ImageView imgFin, imgB;
     private TextView lblFin;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +30,16 @@ public class Actividad2 extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-
         llenarDiccionario();
-
-        //audio();
 
         //para el fin de la actividad
         imgFin = (ImageView) findViewById(R.id.imgFin);
+        imgB = (ImageView) findViewById(R.id.imgBoc);
         lblFin = (TextView) findViewById(R.id.lblFin);
+        imgB.setVisibility(View.GONE);
         imgFin.setVisibility(View.GONE);
         lblFin.setVisibility(View.GONE);
+
 
         //audio
         btnAudio = (Button) findViewById(R.id.btnAudio);
