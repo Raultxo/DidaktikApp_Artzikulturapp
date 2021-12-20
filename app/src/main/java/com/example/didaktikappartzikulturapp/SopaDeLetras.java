@@ -3,6 +3,8 @@ package com.example.didaktikappartzikulturapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +12,14 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.util.HashMap;
 import java.util.Objects;
 
 public class SopaDeLetras extends AppCompatActivity {
 
+    private final HashMap<TextView, Boolean> palabras = new HashMap<TextView, Boolean>();
     private GridView sopa;
     private final String[] letras = new String[] {
             "Y","X","R","E","L","I","Z","G","I","Z","O","N","A","N",
@@ -38,6 +44,8 @@ public class SopaDeLetras extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sopa_de_letras);
 
+        cargarMapa();
+
         // Quitar la barra de titulo de actividad
         Objects.requireNonNull(getSupportActionBar()).hide();
 
@@ -55,7 +63,6 @@ public class SopaDeLetras extends AppCompatActivity {
 
         final String[] anterior = {""};
         sopa.setOnTouchListener((view, motionEvent) -> {
-            System.out.println("Empieza");
             for(int i = 0; i < sopa.getChildCount(); i++) {
                 View v = sopa.getChildAt(i);
                 Rect outRecto = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
@@ -63,12 +70,59 @@ public class SopaDeLetras extends AppCompatActivity {
                     if(!((TextView) v).getText().equals(anterior[0])) {
                         resultado.append(((TextView) v).getText());
                         anterior[0] = (String) ((TextView) v).getText();
+                        boolean posible = false;
+                        for(TextView palabra : palabras.keySet()) {
+                            if(!palabras.get(palabra)) {
+                                if (palabra.getText().toString().toUpperCase().startsWith(resultado.getText().toString())) {
+                                    posible = true;
+                                }
+                                if (palabra.getText().toString().toUpperCase().equals(resultado.getText().toString())) {
+                                    palabra.setVisibility(View.INVISIBLE);
+                                    palabras.put(palabra, true);
+                                    comprobarMapa();
+                                    resultado.setText("");
+                                }
+                            }
+                        }
+                        if(!posible) {
+                            resultado.setText("");
+                        }
                     }
                 }
             }
-            System.out.println("Termina");
             return false;
         });
+    }
+
+    private void cargarMapa() {
+        palabras.put((TextView)findViewById(R.id.artisaua), false);
+        palabras.put((TextView)findViewById(R.id.bufoia), false);
+        palabras.put((TextView)findViewById(R.id.dontzeila), false);
+        palabras.put((TextView)findViewById(R.id.elizgizona), false);
+        palabras.put((TextView)findViewById(R.id.eskalea), false);
+        palabras.put((TextView)findViewById(R.id.juglarea), false);
+        palabras.put((TextView)findViewById(R.id.legenarduna), false);
+        palabras.put((TextView)findViewById(R.id.magoa), false);
+        palabras.put((TextView)findViewById(R.id.malabarista), false);
+        palabras.put((TextView)findViewById(R.id.merkataria), false);
+        palabras.put((TextView)findViewById(R.id.noblea), false);
+        palabras.put((TextView)findViewById(R.id.saltimbankia), false);
+        palabras.put((TextView)findViewById(R.id.titiriteroa), false);
+        palabras.put((TextView)findViewById(R.id.trobadorea), false);
+        palabras.put((TextView)findViewById(R.id.zalduna), false);
+        palabras.put((TextView)findViewById(R.id.zingaroa), false);
+    }
+
+    private void comprobarMapa() {
+        for(TextView palabra : palabras.keySet()) {
+            if(!palabras.get(palabra)) {
+                return;
+            }
+        }
+
+        Intent intent = new Intent(SopaDeLetras.this, Actividad3_Fin.class);
+        startActivity(intent);
+
     }
 
     // Metodo para que quite la barra de navegacion, notificaciones, etc cuando se cambia el focus

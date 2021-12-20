@@ -1,9 +1,9 @@
 package com.example.didaktikappartzikulturapp;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +12,8 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
+import java.util.Objects;
 
 public class DialogoGrupoNuevo extends DialogFragment {
 
@@ -23,20 +25,16 @@ public class DialogoGrupoNuevo extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         //Creamos Dialog
         AlertDialog.Builder builder =new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        @SuppressLint("UseRequireInsteadOfGet") LayoutInflater inflater = Objects.requireNonNull(getActivity()).getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialogo_grupo_nuevo, null);
         builder.setView(dialogView)
-                .setPositiveButton("Aceptar",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        listener.onPossitiveButtonClick();
-                        dialog.cancel();
-                    }
+                .setPositiveButton("Aceptar", (dialog, id) -> {
+                    listener.onPossitiveButtonClick();
+                    dialog.cancel();
                 })
-                .setNegativeButton("Cancelar",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        listener.onNegativeButtonClick();
-                        dialog.cancel();
-                    }
+                .setNegativeButton("Cancelar", (dialog, id) -> {
+                    listener.onNegativeButtonClick();
+                    dialog.cancel();
                 });
 
 
@@ -56,7 +54,7 @@ public class DialogoGrupoNuevo extends DialogFragment {
 
     //interfaz para evitar el error
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
             listener = (DialogoGrupoNuevo.OnDialogoConfirmacionListener) context;

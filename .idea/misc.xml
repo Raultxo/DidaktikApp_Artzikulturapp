@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/actividad1.xml" value="0.365625" />
+        <entry key="app/src/main/res/layout/actividad1_puzzle.xml" value="0.33177083333333335" />
         <entry key="app/src/main/res/layout/actividad2.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/actividad2_audio.xml" value="0.5" />
         <entry key="app/src/main/res/layout/actividad3.xml" value="0.365625" />
+        <entry key="app/src/main/res/layout/activity_actividad3_fin.xml" value="0.2916666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24003623188405798" />
+        <entry key="app/src/main/res/layout/activity_sopa_de_letras.xml" value="0.33" />
         <entry key="app/src/main/res/layout/dialogo_grupo_nuevo.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fin_acti.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/layout/fragment_fin.xml" value="0.2859375" />
