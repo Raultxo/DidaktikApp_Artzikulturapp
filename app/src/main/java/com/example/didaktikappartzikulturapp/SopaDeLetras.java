@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
@@ -12,14 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.HashMap;
 import java.util.Objects;
 
 public class SopaDeLetras extends AppCompatActivity {
 
-    private final HashMap<TextView, Boolean> palabras = new HashMap<TextView, Boolean>();
+    private final HashMap<TextView, Boolean> palabras = new HashMap<>();
     private GridView sopa;
     private final String[] letras = new String[] {
             "Y","X","R","E","L","I","Z","G","I","Z","O","N","A","N",
@@ -122,7 +119,6 @@ public class SopaDeLetras extends AppCompatActivity {
 
         Intent intent = new Intent(SopaDeLetras.this, Actividad3_Fin.class);
         startActivity(intent);
-
     }
 
     // Metodo para que quite la barra de navegacion, notificaciones, etc cuando se cambia el focus
@@ -139,6 +135,4 @@ public class SopaDeLetras extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
-
-
 }

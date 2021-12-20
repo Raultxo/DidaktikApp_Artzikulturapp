@@ -30,10 +30,10 @@
 
     <Button
         android:id="@+id/actividad1"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="52dp"
-        android:text="Actividad1"
+        android:text="500 urteko Artea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
@@ -41,10 +41,10 @@
 
     <Button
         android:id="@+id/actividad2"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:text="Actividad2"
+        android:text="arteko ama birjinaren santutegia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad1"
@@ -52,10 +52,10 @@
 
     <Button
         android:id="@+id/actividad3"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Actividad3"
+        android:text="Garai bateko merkatura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad2"
@@ -63,10 +63,10 @@
 
     <Button
         android:id="@+id/actividad4"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Actividad4"
+        android:text="Ibar gaztak"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad3"
@@ -74,10 +74,10 @@
 
     <Button
         android:id="@+id/actividad5"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Actividad5"
+        android:text="ortiz de molinillo de velasco dorrea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad4"
@@ -85,10 +85,10 @@
 
     <Button
         android:id="@+id/actividad6"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Actividad6"
+        android:text="antinzako udaletxea. xix. mendea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad5"
@@ -96,10 +96,10 @@
 
     <Button
         android:id="@+id/actividad7"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Actividad7"
+        android:text="goiko plaza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad6"
@@ -107,10 +107,10 @@
 
     <Button
         android:id="@+id/actividad8"
-        android:layout_width="281dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Actividad8"
+        android:text="artziniegako ur-jauzia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad7"
