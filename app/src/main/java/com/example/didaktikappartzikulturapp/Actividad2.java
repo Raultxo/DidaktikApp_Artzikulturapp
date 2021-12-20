@@ -162,6 +162,7 @@ public class Actividad2 extends AppCompatActivity {
                 lblFin.setText("Oso ondo egin duzu, pasa zaitezke hurrengo jarduerara." +
                                 "Horretarako, Artziniegako Museo Etnografikora joan zaitez.");
                 imgFin.setVisibility(View.VISIBLE);
+                imgB.setVisibility(View.GONE);
                 lblFin.setVisibility(View.VISIBLE);
         }
     }
