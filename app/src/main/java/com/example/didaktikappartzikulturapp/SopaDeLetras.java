@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
@@ -47,25 +46,29 @@ public class SopaDeLetras extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(uiOptions);
 
+        TextView resultado = findViewById(R.id.resultado);
+
         sopa = findViewById(R.id.sopa);
 
         ArrayAdapter<String> listaAdapter = new ArrayAdapter<>(this, R.layout.textview_sopa, letras);
         sopa.setAdapter(listaAdapter);
 
+        final String[] anterior = {""};
         sopa.setOnTouchListener((view, motionEvent) -> {
             System.out.println("Empieza");
             for(int i = 0; i < sopa.getChildCount(); i++) {
                 View v = sopa.getChildAt(i);
                 Rect outRecto = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
                 if(outRecto.contains((int)motionEvent.getX(), (int)motionEvent.getY())) {
-                    System.out.println(((TextView) v).getText());
+                    if(!((TextView) v).getText().equals(anterior[0])) {
+                        resultado.append(((TextView) v).getText());
+                        anterior[0] = (String) ((TextView) v).getText();
+                    }
                 }
             }
             System.out.println("Termina");
             return false;
         });
-
-
     }
 
     // Metodo para que quite la barra de navegacion, notificaciones, etc cuando se cambia el focus
