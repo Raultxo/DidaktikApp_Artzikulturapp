@@ -127,7 +127,7 @@ public class Actividad1_puzzle extends AppCompatActivity {
         int scaledBitmapWidth = dimensions[2];
         int scaledBitmapHeight = dimensions[3];
 
-        int croppedImageWidth = scaledBitmapWidth - 2 * Math.abs(scaledBitmapLeft);
+        int croppedImageWidth = scaledBitmapWidth - 2 * Math.abs(scaledBitmapLeft); 
         int croppedImageHeight = scaledBitmapHeight - 2 * Math.abs(scaledBitmapTop);
 
         Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, scaledBitmapWidth, scaledBitmapHeight, true);
