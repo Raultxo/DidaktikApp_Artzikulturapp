@@ -421,4 +421,22 @@
                   android:text="alboan"/>
       </TableRow>
   </TableLayout>
+
+    <!--  Fin de la actividad  -->
+    <ImageView
+        android:id="@+id/imgFin"
+        android:layout_width="209dp"
+        android:layout_height="447dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-50dp"/>
+
+    <TextView
+        android:id="@+id/lblFin"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="12dp"
+        android:textSize="17dp" />
+
 </RelativeLayout>

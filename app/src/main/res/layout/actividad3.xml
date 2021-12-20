@@ -71,7 +71,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:srcCompat="@drawable/juglarea" />
+        app:srcCompat="@drawable/artisaua" />
 
     <TextView
         android:id="@+id/textView3"
