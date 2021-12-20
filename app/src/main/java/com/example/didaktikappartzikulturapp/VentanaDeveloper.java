@@ -66,7 +66,7 @@ public class VentanaDeveloper extends AppCompatActivity {
         }
 
         if(v.equals(btnAct2)){
-            Intent intent = new Intent(VentanaDeveloper.this, Actividad2.class);
+            Intent intent = new Intent(VentanaDeveloper.this, Actividad2_Audio.class);
             startActivity(intent);
         }
 

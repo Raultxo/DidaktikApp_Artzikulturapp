@@ -20,7 +20,7 @@ import java.util.Iterator;
 public class Actividad2 extends AppCompatActivity {
 
     private HashMap<EditText,String> respuestas;
-    private Button btnCorregir, btnVolver;
+    private Button btnCorregir, btnVolver, btnAudio;
     private ImageView imgFin;
     private TextView lblFin;
 
@@ -33,6 +33,8 @@ public class Actividad2 extends AppCompatActivity {
 
         llenarDiccionario();
 
+        //audio();
+
         //para el fin de la actividad
         imgFin = (ImageView) findViewById(R.id.imgFin);
         lblFin = (TextView) findViewById(R.id.lblFin);
@@ -40,6 +42,13 @@ public class Actividad2 extends AppCompatActivity {
         lblFin.setVisibility(View.GONE);
 
         //audio
+        btnAudio = (Button) findViewById(R.id.btnAudio);
+        btnAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                audio();
+            }
+        });
 
         //corregir
         btnCorregir = (Button) findViewById(R.id.btnCorregir);
@@ -105,6 +114,11 @@ public class Actividad2 extends AppCompatActivity {
         aux.setText("eskultura");
     }
 
+    public void audio()
+    {
+        Intent intento=new Intent(Actividad2.this, Actividad2_Audio.class);
+        startActivity(intento);
+    }
 
     public void corregir()
     {
@@ -145,7 +159,7 @@ public class Actividad2 extends AppCompatActivity {
 
             //felicidades por haber terminado, etc, etc
                 imgFin.setImageResource(R.drawable.dontzeila);
-                lblFin.setText("oso ondo egin duzu, pasa zaitezke hurrengo jarduerara." +
+                lblFin.setText("Oso ondo egin duzu, pasa zaitezke hurrengo jarduerara." +
                                 "Horretarako, Artziniegako Museo Etnografikora joan zaitez.");
                 imgFin.setVisibility(View.VISIBLE);
                 lblFin.setVisibility(View.VISIBLE);

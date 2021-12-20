@@ -43,6 +43,10 @@
             android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name=".Actividad2_Audio"
+            android:screenOrientation="portrait">
+
+        </activity>
         <activity android:name=".Actividad3"
             android:screenOrientation="portrait">
 

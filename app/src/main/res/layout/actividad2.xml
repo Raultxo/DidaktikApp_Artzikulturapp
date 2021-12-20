@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!--  Volver  -->
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="411dp"
@@ -29,6 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
+<!--  botones  -->
     <Button
         android:id="@+id/btnAudio"
         android:layout_width="wrap_content"
@@ -52,11 +54,11 @@
     <!-- TEXTO -->
     <RelativeLayout
         android:id="@+id/textoLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnAudio"
         android:layout_centerInParent="true"
-        android:padding="30dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/lbl1"
@@ -361,10 +363,11 @@
 
   <TableLayout
       android:id="@+id/tabla"
-      android:layout_width="match_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/textoLayout"
-      android:padding="30dp">
+      android:layout_centerInParent="true"
+      android:layout_marginTop="25dp">
 
       <TableRow>
               <TextView
@@ -428,7 +431,7 @@
         android:layout_width="209dp"
         android:layout_height="447dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-50dp"/>
+        android:layout_marginBottom="-50dp" />
 
     <TextView
         android:id="@+id/lblFin"
