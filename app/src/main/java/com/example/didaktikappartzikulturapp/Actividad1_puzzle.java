@@ -39,8 +39,8 @@ public class Actividad1_puzzle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad1_puzzle);
 
-        final RelativeLayout layout = findViewById(R.id.layout);
-        final ImageView imageView = findViewById(R.id.imageView);
+        final RelativeLayout layout = findViewById(R.id.layout1);
+        final ImageView imageView = findViewById(R.id.imgPuzzle);
 
         Intent intent = getIntent();
         final String assetName = intent.getStringExtra("assetName");
@@ -114,7 +114,7 @@ public class Actividad1_puzzle extends AppCompatActivity {
         int rows = 4;
         int cols = 3;
 
-        ImageView imageView = findViewById(R.id.imageView);
+        ImageView imageView = findViewById(R.id.imgPuzzle);
         ArrayList<PuzzlePiece> pieces = new ArrayList<>(piecesNumber);
 
         // Get the scaled bitmap of the source image
@@ -127,11 +127,11 @@ public class Actividad1_puzzle extends AppCompatActivity {
         int scaledBitmapWidth = dimensions[2];
         int scaledBitmapHeight = dimensions[3];
 
-        int croppedImageWidth = scaledBitmapWidth - 2 * abs(scaledBitmapLeft);
-        int croppedImageHeight = scaledBitmapHeight - 2 * abs(scaledBitmapTop);
+        int croppedImageWidth = scaledBitmapWidth - 2 * Math.abs(scaledBitmapLeft);
+        int croppedImageHeight = scaledBitmapHeight - 2 * Math.abs(scaledBitmapTop);
 
         Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, scaledBitmapWidth, scaledBitmapHeight, true);
-        Bitmap croppedBitmap = Bitmap.createBitmap(scaledBitmap, abs(scaledBitmapLeft), abs(scaledBitmapTop), croppedImageWidth, croppedImageHeight);
+        Bitmap croppedBitmap = Bitmap.createBitmap(scaledBitmap, Math.abs(scaledBitmapLeft), Math.abs(scaledBitmapTop), croppedImageWidth, croppedImageHeight);
 
         // Calculate the with and height of the pieces
         int pieceWidth = croppedImageWidth/cols;

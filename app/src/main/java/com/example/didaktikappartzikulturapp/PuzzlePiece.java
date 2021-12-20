@@ -1,9 +1,9 @@
 package com.example.didaktikappartzikulturapp;
 
 import android.content.Context;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.*;
 
-public class PuzzlePiece extends android.support.v7.widget.AppCompatImageView  {
+public class PuzzlePiece extends androidx.appcompat.widget.AppCompatImageView  {
     public int xCoord;
     public int yCoord;
     public int pieceWidth;

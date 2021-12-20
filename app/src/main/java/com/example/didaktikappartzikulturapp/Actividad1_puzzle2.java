@@ -111,11 +111,11 @@ public class Actividad1_puzzle2 extends AppCompatActivity {
 
     public void run() {
         pieces = splitImage();
-        TouchListener touchListener = new TouchListener();
+        //TouchListener touchListener = new TouchListener(Actividad1_puzzle.this);
         for(Bitmap piece : pieces) {
             ImageView iv = new ImageView(getApplicationContext());
             iv.setImageBitmap(piece);
-            iv.setOnTouchListener(touchListener);
+            //iv.setOnTouchListener(touchListener);
             layout.addView(iv);
         }
     }
