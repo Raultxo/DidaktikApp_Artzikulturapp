@@ -54,6 +54,9 @@
         <activity android:name=".Actividad1_puzzle">
 
         </activity>
+        <activity android:name=".Actividad3_Fin">
+
+        </activity>
 
     </application>
 
