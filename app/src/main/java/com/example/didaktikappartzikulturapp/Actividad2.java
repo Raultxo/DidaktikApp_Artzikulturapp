@@ -30,6 +30,11 @@ public class Actividad2 extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+        // Quitar la barra de notificaciones, bateria, hora, etc
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
+        decorView.setSystemUiVisibility(uiOptions);
+
         llenarDiccionario();
 
         //para el fin de la actividad

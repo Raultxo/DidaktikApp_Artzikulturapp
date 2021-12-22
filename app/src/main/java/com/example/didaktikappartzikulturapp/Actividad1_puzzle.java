@@ -16,6 +16,7 @@ import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
 import java.util.Random;
 
 public class Actividad1_puzzle extends AppCompatActivity {
@@ -38,6 +40,15 @@ public class Actividad1_puzzle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad1_puzzle);
+
+        // Quitar la barra de titulo de actividad
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
+        // Quitar la barra de notificaciones, bateria, hora, etc
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
+        decorView.setSystemUiVisibility(uiOptions);
+
 
         final RelativeLayout layout = findViewById(R.id.layout1);
         final ImageView imageView = findViewById(R.id.imgPuzzle);
@@ -354,5 +365,20 @@ public class Actividad1_puzzle extends AppCompatActivity {
         matrix.postRotate(angle);
         return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(),
                 matrix, true);
+    }
+
+    // Metodo para que quite la barra de navegacion, notificaciones, etc cuando se cambia el focus
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
     }
 }
