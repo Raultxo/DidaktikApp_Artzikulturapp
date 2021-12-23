@@ -1,11 +1,11 @@
 package com.example.didaktikappartzikulturapp;
 
-public class Grupo {
+public class Main_Grupo {
 
     private String nombre;
     private int actividad;
 
-    public Grupo(String nom, int acti) {
+    public Main_Grupo(String nom, int acti) {
         nombre=nom;
         actividad=acti;
     }

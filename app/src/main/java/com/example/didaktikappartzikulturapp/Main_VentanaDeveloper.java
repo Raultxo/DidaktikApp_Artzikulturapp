@@ -8,14 +8,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-public class VentanaDeveloper extends AppCompatActivity {
+public class Main_VentanaDeveloper extends AppCompatActivity {
 
     private Button btnAct1, btnAct2, btnAct3, btnAct4, btnAct5, btnAct6, btnAct7, btnAct8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ventana_developer);
+        setContentView(R.layout.main_ventana_developer);
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
@@ -61,47 +61,47 @@ public class VentanaDeveloper extends AppCompatActivity {
 
     public void abrirActividad(View v){
         if(v.equals(btnAct1)){
-            Intent intent = new Intent(VentanaDeveloper.this, Actividad1.class);
+            Intent intent = new Intent(Main_VentanaDeveloper.this, Act1_Inicio.class);
             startActivity(intent);
         }
 
         if(v.equals(btnAct2)){
-            Intent intent = new Intent(VentanaDeveloper.this, Actividad2_Audio.class);
+            Intent intent = new Intent(Main_VentanaDeveloper.this, Act2_Inicio.class);
             startActivity(intent);
         }
 
         if(v.equals(btnAct3)){
-            Intent intent = new Intent(VentanaDeveloper.this, Actividad3.class);
+            Intent intent = new Intent(Main_VentanaDeveloper.this, Act3_Inicio.class);
             startActivity(intent);
         }
 
         if(v.equals(btnAct4)){
+            // Intent intent = new Intent(Main_VentanaDeveloper.this, Actividad4.class);
+            // startActivity(intent);
             System.out.println("Click en actividad 4");
-            //Intent intent = new Intent(VentanaDeveloper.this, Actividad4.class);
-            //startActivity(intent);
         }
 
         if(v.equals(btnAct5)){
             System.out.println("Click en actividad 5");
-            //Intent intent = new Intent(VentanaDeveloper.this, Actividad5.class);
-            //startActivity(intent);
+            // Intent intent = new Intent(Main_VentanaDeveloper.this, Actividad5.class);
+            // startActivity(intent);
         }
 
         if(v.equals(btnAct6)){
             System.out.println("Click en actividad 6");
-            //Intent intent = new Intent(VentanaDeveloper.this, Actividad6.class);
+            //Intent intent = new Intent(Main_VentanaDeveloper.this, Actividad6.class);
             //startActivity(intent);
         }
 
         if(v.equals(btnAct7)){
             System.out.println("Click en actividad 7");
-            //Intent intent = new Intent(VentanaDeveloper.this, Actividad7.class);
+            //Intent intent = new Intent(Main_VentanaDeveloper.this, Actividad7.class);
             //startActivity(intent);
         }
 
         if(v.equals(btnAct8)){
             System.out.println("Click en actividad 8");
-            //Intent intent = new Intent(VentanaDeveloper.this, Actividad8.class);
+            //Intent intent = new Intent(Main_VentanaDeveloper.this, Actividad8.class);
             //startActivity(intent);
         }
     }

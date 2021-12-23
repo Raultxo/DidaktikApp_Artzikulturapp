@@ -4,12 +4,12 @@ import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.LinearLayout;
 
-public class MyAnim extends Animation {
+public class Main_MyAnimPuerta extends Animation {
 
     private final LinearLayout view;
     private int valorIntDrawable;
 
-    public MyAnim(LinearLayout view, int valorIntDrawable) {
+    public Main_MyAnimPuerta(LinearLayout view, int valorIntDrawable) {
         this.view = view;
         this.valorIntDrawable = valorIntDrawable;
     }

@@ -2,11 +2,8 @@ package com.example.didaktikappartzikulturapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class Actividad1 extends AppCompatActivity {
+public class Act1_Inicio extends AppCompatActivity {
 
     private Button btnVolver, btnContinuar;
     private ImageButton btnAudio;
@@ -30,7 +27,7 @@ public class Actividad1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad1);
+        setContentView(R.layout.act1_inicio);
         getSupportActionBar().hide();
 
         View decorView = getWindow().getDecorView();
@@ -45,7 +42,7 @@ public class Actividad1 extends AppCompatActivity {
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Actividad1.this, Actividad1_puzzle.class);
+                Intent intent = new Intent(Act1_Inicio.this, Act1_Juego.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +57,7 @@ public class Actividad1 extends AppCompatActivity {
             }
         });
 
-        mp = MediaPlayer.create(Actividad1.this, R.raw.audio1);
+        mp = MediaPlayer.create(Act1_Inicio.this, R.raw.audio1);
         btnAudio = (ImageButton) findViewById(R.id.btnAudio);
         observer = new MediaObserver();
         new Thread(observer).start();
@@ -131,7 +128,7 @@ public class Actividad1 extends AppCompatActivity {
     protected void onResume() {
         super.onResume();;
         btnAudio.setImageResource(android.R.drawable.ic_media_play);
-        mp = MediaPlayer.create(Actividad1.this, R.raw.audio1);
+        mp = MediaPlayer.create(Act1_Inicio.this, R.raw.audio1);
     }
 
     private class MediaObserver implements Runnable {

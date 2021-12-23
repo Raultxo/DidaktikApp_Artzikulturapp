@@ -9,11 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class Main_Activity extends AppCompatActivity {
 
     private String codigo = "";
 
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_activity);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         View decorView = getWindow().getDecorView();
@@ -33,20 +32,20 @@ public class MainActivity extends AppCompatActivity {
         btnEmpezar.setOnClickListener(view -> {
             System.out.println(codigo);
             if(codigo.equals("aabbcdcd")) {
-                Toast.makeText(MainActivity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
-                Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
+                Toast.makeText(Main_Activity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(Main_Activity.this, Main_VentanaDeveloper.class);
+                Intent intent = new Intent(Main_Activity.this, Main_VentanaGrupos.class);
                 startActivity(intent);
             }
             else {
-                //Intent intent = new Intent(MainActivity.this, VentanaGrupos.class);
-                Intent intent = new Intent(MainActivity.this, VentanaDeveloper.class);
+                //Intent intent = new Intent(Main_Activity.this, Main_VentanaGrupos.class);
+                Intent intent = new Intent(Main_Activity.this, Main_VentanaDeveloper.class);
                 startActivity(intent);
             }
             codigo = "";
         });
         ConstraintLayout principal = findViewById(R.id.principal);
-        principal.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+        principal.setOnTouchListener(new Main_OnSwipeTouchListener(Main_Activity.this) {
 
             @Override
             public void onSwipeTop() {

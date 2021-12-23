@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Actividad3_Fin">
+    tools:context=".Act3_Fin">
 
     <ImageView
         android:id="@+id/imageView7"

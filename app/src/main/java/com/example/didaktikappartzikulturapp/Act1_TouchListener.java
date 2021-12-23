@@ -4,21 +4,18 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 import static java.lang.StrictMath.abs;
 
-public class TouchListener implements View.OnTouchListener {
+public class Act1_TouchListener implements View.OnTouchListener {
     private float xDelta;
     private float yDelta;
-    private Actividad1_puzzle activity;
+    private Act1_Juego activity;
 
-    public TouchListener(Actividad1_puzzle activity) {
+    public Act1_TouchListener(Act1_Juego activity) {
         this.activity = activity;
     }
 
@@ -28,7 +25,7 @@ public class TouchListener implements View.OnTouchListener {
         float y = motionEvent.getRawY();
         final double tolerance = sqrt(pow(view.getWidth(), 2) + pow(view.getHeight(), 2)) / 10;
 
-        PuzzlePiece piece = (PuzzlePiece) view;
+        Act1_PuzzlePiece piece = (Act1_PuzzlePiece) view;
         if (!piece.canMove) {
             return true;
         }

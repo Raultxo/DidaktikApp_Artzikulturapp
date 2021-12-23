@@ -30,16 +30,16 @@ import java.util.Collections;
 import java.util.Objects;
 import java.util.Random;
 
-public class Actividad1_puzzle extends AppCompatActivity {
+public class Act1_Juego extends AppCompatActivity {
 
-    ArrayList<PuzzlePiece> pieces;
+    ArrayList<Act1_PuzzlePiece> pieces;
     String mCurrentPhotoPath;
     String mCurrentPhotoUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad1_puzzle);
+        setContentView(R.layout.act1_juego);
 
         // Quitar la barra de titulo de actividad
         Objects.requireNonNull(getSupportActionBar()).hide();
@@ -71,10 +71,10 @@ public class Actividad1_puzzle extends AppCompatActivity {
                     imageView.setImageURI(Uri.parse(mCurrentPhotoUri));
                 }
                 pieces = splitImage();
-                TouchListener touchListener = new TouchListener(Actividad1_puzzle.this);
+                Act1_TouchListener touchListener = new Act1_TouchListener(Act1_Juego.this);
                 // shuffle pieces order
                 Collections.shuffle(pieces);
-                for (PuzzlePiece piece : pieces) {
+                for (Act1_PuzzlePiece piece : pieces) {
                     piece.setOnTouchListener(touchListener);
                     layout.addView(piece);
                     // randomize position, on the bottom of the screen
@@ -120,13 +120,13 @@ public class Actividad1_puzzle extends AppCompatActivity {
         }
     }
 
-    private ArrayList<PuzzlePiece> splitImage() {
+    private ArrayList<Act1_PuzzlePiece> splitImage() {
         int piecesNumber = 12;
         int rows = 4;
         int cols = 3;
 
         ImageView imageView = findViewById(R.id.imgPuzzle);
-        ArrayList<PuzzlePiece> pieces = new ArrayList<>(piecesNumber);
+        ArrayList<Act1_PuzzlePiece> pieces = new ArrayList<>(piecesNumber);
 
         // Get the scaled bitmap of the source image
         Drawable img =  imageView.getDrawable();
@@ -168,7 +168,7 @@ public class Actividad1_puzzle extends AppCompatActivity {
 
                 // apply the offset to each piece
                 Bitmap pieceBitmap = Bitmap.createBitmap(croppedBitmap, xCoord - offsetX, yCoord - offsetY, pieceWidth + offsetX, pieceHeight + offsetY);
-                PuzzlePiece piece = new PuzzlePiece(getApplicationContext());
+                Act1_PuzzlePiece piece = new Act1_PuzzlePiece(getApplicationContext());
                 piece.setImageBitmap(croppedBitmap);
                 piece.xCoord = xCoord - offsetX + imageView.getLeft();
                 piece.yCoord = yCoord - offsetY + imageView.getTop();
@@ -306,7 +306,7 @@ public class Actividad1_puzzle extends AppCompatActivity {
     }
 
     private boolean isGameOver() {
-        for (PuzzlePiece piece : pieces) {
+        for (Act1_PuzzlePiece piece : pieces) {
             if (piece.canMove) {
                 return false;
             }

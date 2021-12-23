@@ -20,7 +20,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class Actividad3 extends AppCompatActivity {
+public class Act3_Inicio extends AppCompatActivity {
 
     private final String texto = "Herri polit honetako biztanleek, alegia, zuek, produktuak Erdi " +
             "Aroan nola saltzen eta trukatzen zituzten urtero irudikatzen duzue. Dakizuenez, azoka " +
@@ -45,7 +45,7 @@ public class Actividad3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad3);
+        setContentView(R.layout.act3_inicio);
 
         // Quitar la barra de titulo de actividad
         Objects.requireNonNull(getSupportActionBar()).hide();
@@ -58,7 +58,7 @@ public class Actividad3 extends AppCompatActivity {
         // Boton para continuar e ir a la sopa de letras
         btnContinuar = findViewById(R.id.btnContinuar);
         btnContinuar.setOnClickListener(view -> {
-            Intent intent = new Intent(Actividad3.this, SopaDeLetras.class);
+            Intent intent = new Intent(Act3_Inicio.this, Act3_Juego.class);
             startActivity(intent);
         });
 
@@ -70,7 +70,7 @@ public class Actividad3 extends AppCompatActivity {
         });
 
         // Boton para reproducir el audio y que la barra de progreso cambie en un Thread distinto
-        mp = MediaPlayer.create(Actividad3.this, R.raw.audio3);
+        mp = MediaPlayer.create(Act3_Inicio.this, R.raw.audio3);
         btnAudio = findViewById(R.id.btnAudio);
         MediaObserver observer = new MediaObserver();
         new Thread(observer).start();

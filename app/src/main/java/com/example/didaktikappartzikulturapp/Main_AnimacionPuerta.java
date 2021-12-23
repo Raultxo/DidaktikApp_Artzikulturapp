@@ -9,10 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-public class PruebaAimacion extends AppCompatActivity {
+public class Main_AnimacionPuerta extends AppCompatActivity {
 
     private LinearLayout layout;
-    private MyAnim backgroundAnim;
+    private Main_MyAnimPuerta backgroundAnim;
     private static final int[] FONDOS = new int[] {
             R.drawable.fondo,
             R.drawable.fondo1,
@@ -29,7 +29,7 @@ public class PruebaAimacion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.prueba_animacion);
+        setContentView(R.layout.main_animacion_puerta);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         View decorView = getWindow().getDecorView();
@@ -37,7 +37,7 @@ public class PruebaAimacion extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
         layout = (LinearLayout) findViewById(R.id.animacion);
 
-        backgroundAnim = new MyAnim(layout, FONDOS[posFondo]);
+        backgroundAnim = new Main_MyAnimPuerta(layout, FONDOS[posFondo]);
         backgroundAnim.setDuration(125);
         layout.startAnimation(backgroundAnim);
         backgroundAnim.setAnimationListener(new Animation.AnimationListener() {

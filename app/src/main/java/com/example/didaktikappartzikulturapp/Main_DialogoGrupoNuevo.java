@@ -15,10 +15,10 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.Objects;
 
-public class DialogoGrupoNuevo extends DialogFragment {
+public class Main_DialogoGrupoNuevo extends DialogFragment {
 
     private EditText txtGrupo;
-    DialogoGrupoNuevo.OnDialogoConfirmacionListener listener;
+    Main_DialogoGrupoNuevo.OnDialogoConfirmacionListener listener;
 
     @NonNull
     @Override
@@ -26,7 +26,7 @@ public class DialogoGrupoNuevo extends DialogFragment {
         //Creamos Dialog
         AlertDialog.Builder builder =new AlertDialog.Builder(getActivity());
         @SuppressLint("UseRequireInsteadOfGet") LayoutInflater inflater = Objects.requireNonNull(getActivity()).getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.dialogo_grupo_nuevo, null);
+        View dialogView = inflater.inflate(R.layout.main_dialogo_grupo_nuevo, null);
         builder.setView(dialogView)
                 .setPositiveButton("Aceptar", (dialog, id) -> {
                     listener.onPossitiveButtonClick();
@@ -57,7 +57,7 @@ public class DialogoGrupoNuevo extends DialogFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
-            listener = (DialogoGrupoNuevo.OnDialogoConfirmacionListener) context;
+            listener = (Main_DialogoGrupoNuevo.OnDialogoConfirmacionListener) context;
         }
         catch (ClassCastException e) {
             throw new ClassCastException(context.toString() +" no Implemento OnDialogoConfirmacionListener");

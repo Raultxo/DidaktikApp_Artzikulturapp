@@ -1,20 +1,20 @@
 package com.example.didaktikappartzikulturapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Objects;
 
-public class Actividad3_Fin extends AppCompatActivity {
+public class Act1_Fin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actividad3_fin);
+        setContentView(R.layout.act3_fin);
 
         // Quitar la barra de titulo de actividad
         Objects.requireNonNull(getSupportActionBar()).hide();
@@ -28,7 +28,7 @@ public class Actividad3_Fin extends AppCompatActivity {
         // Boton para continuar e ir a la sopa de letras
         Button btnContinuar = findViewById(R.id.btnContinuar);
         btnContinuar.setOnClickListener(view -> {
-            Intent intent = new Intent(Actividad3_Fin.this, VentanaDeveloper.class);
+            Intent intent = new Intent(Act1_Fin.this, Main_VentanaDeveloper.class);
             startActivity(intent);
         });
     }

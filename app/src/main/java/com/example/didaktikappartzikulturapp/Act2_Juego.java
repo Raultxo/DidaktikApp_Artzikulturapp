@@ -2,33 +2,31 @@ package com.example.didaktikappartzikulturapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Objects;
 
-public class Actividad2 extends AppCompatActivity {
+public class Act2_Juego extends AppCompatActivity {
 
     private HashMap<EditText,String> respuestas;
-    private Button btnCorregir, btnVolver, btnAudio;
     private ImageView imgFin, imgB;
     private TextView lblFin;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad2);
+        setContentView(R.layout.act2_juego);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         // Quitar la barra de notificaciones, bateria, hora, etc
         View decorView = getWindow().getDecorView();
@@ -47,37 +45,25 @@ public class Actividad2 extends AppCompatActivity {
 
 
         //audio
-        btnAudio = (Button) findViewById(R.id.btnAudio);
-        btnAudio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                audio();
-            }
-        });
+        Button btnAudio = (Button) findViewById(R.id.btnAudio);
+        btnAudio.setOnClickListener(view -> audio());
 
         //corregir
-        btnCorregir = (Button) findViewById(R.id.btnCorregir);
-        btnCorregir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                corregir();
-            }
-        });
+        Button btnCorregir = (Button) findViewById(R.id.btnCorregir);
+        btnCorregir.setOnClickListener(view -> corregir());
 
         //volver
-        btnVolver = (Button) findViewById(R.id.btnVolver);
-        btnVolver.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                overridePendingTransition(0,0);   //cambiar a ir al mapa
-            }
+        Button btnVolver = (Button) findViewById(R.id.btnVolver);
+        btnVolver.setOnClickListener(view -> {
+            finish();
+            overridePendingTransition(0,0);   //cambiar a ir al mapa
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private void llenarDiccionario()
     {
-        respuestas=new HashMap<EditText,String>();
+        respuestas= new HashMap<>();
         EditText aux=(EditText) findViewById(R.id.resp1);
         respuestas.put(aux,"santutegi");
         aux.setText("santutegi");
@@ -121,10 +107,11 @@ public class Actividad2 extends AppCompatActivity {
 
     public void audio()
     {
-        Intent intento=new Intent(Actividad2.this, Actividad2_Audio.class);
+        Intent intento=new Intent(Act2_Juego.this, Act2_Inicio.class);
         startActivity(intento);
     }
 
+    @SuppressLint("SetTextI18n")
     public void corregir()
     {
         Iterator<EditText> it = respuestas.keySet().iterator();
@@ -136,7 +123,7 @@ public class Actividad2 extends AppCompatActivity {
 
             if(texto.equals(resp))
             {
-                edit.setTextColor(getResources().getColor(R.color.correcto));  //FF48B54D --> verde
+                edit.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.correcto));
                 edit.setEnabled(false);
                 correctas++;
             }
@@ -148,7 +135,10 @@ public class Actividad2 extends AppCompatActivity {
 
         if(correctas==10)
         {
-            //ocultar texto y botones
+
+            Intent intent = new Intent(Act2_Juego.this, Act2_Fin.class);
+            startActivity(intent);
+         /*   //ocultar texto y botones
             RelativeLayout rel=(RelativeLayout) findViewById(R.id.textoLayout);
             rel.setVisibility(View.GONE);
 
@@ -169,6 +159,9 @@ public class Actividad2 extends AppCompatActivity {
                 imgFin.setVisibility(View.VISIBLE);
                 imgB.setVisibility(View.GONE);
                 lblFin.setVisibility(View.VISIBLE);
+
+                */
+
         }
     }
 }

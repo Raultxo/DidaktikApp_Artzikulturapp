@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class SopaDeLetras extends AppCompatActivity {
+public class Act3_Juego extends AppCompatActivity {
 
     private final HashMap<TextView, Boolean> palabras = new HashMap<>();
     private GridView sopa;
@@ -39,7 +39,7 @@ public class SopaDeLetras extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sopa_de_letras);
+        setContentView(R.layout.act3_juego);
 
         cargarMapa();
 
@@ -55,7 +55,7 @@ public class SopaDeLetras extends AppCompatActivity {
 
         sopa = findViewById(R.id.sopa);
 
-        ArrayAdapter<String> listaAdapter = new ArrayAdapter<>(this, R.layout.textview_sopa, letras);
+        ArrayAdapter<String> listaAdapter = new ArrayAdapter<>(this, R.layout.act3_textview_sopa, letras);
         sopa.setAdapter(listaAdapter);
 
         final String[] anterior = {""};
@@ -117,7 +117,7 @@ public class SopaDeLetras extends AppCompatActivity {
             }
         }
 
-        Intent intent = new Intent(SopaDeLetras.this, Actividad3_Fin.class);
+        Intent intent = new Intent(Act3_Juego.this, Act3_Fin.class);
         startActivity(intent);
     }
 

@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DidaktikAppArtzikulturapp">
         <activity
-            android:name=".SopaDeLetras"
-            android:exported="true"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".MainActivity"
+            android:name=".Main_Activity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -23,41 +19,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PruebaAimacion"
+        <activity android:name=".Main_VentanaGrupos"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".VentanaGrupos"
+        <activity android:name=".Main_VentanaDeveloper"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".VentanaDeveloper"
+        <activity android:name=".Main_AnimacionPuerta"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".Actividad1"
+        <activity android:name=".Act1_Inicio"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".Actividad2"
+        <activity android:name=".Act1_Juego"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".Actividad2_Audio"
+        <activity android:name=".Act1_Fin"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".Actividad3"
+        <activity android:name=".Act2_Juego"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".Actividad1_puzzle">
-
+        <activity android:name=".Act2_Inicio"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".Actividad3_Fin">
-
+        <activity android:name=".Act2_Fin"
+            android:screenOrientation="portrait">
         </activity>
-
+        <activity android:name=".Act3_Inicio"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Act3_Juego"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Act3_Fin"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
-
 </manifest>
