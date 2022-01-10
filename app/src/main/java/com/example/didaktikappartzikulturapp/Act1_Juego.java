@@ -301,7 +301,7 @@ public class Act1_Juego extends AppCompatActivity {
 
     public void checkGameOver() {
         if (isGameOver()) {
-            Intent intent = new Intent(Actividad1_puzzle.this, Actividad1_Fin.class);
+            Intent intent = new Intent(Act1_Juego.this, Act1_Fin.class);
             startActivity(intent);
         }
     }
