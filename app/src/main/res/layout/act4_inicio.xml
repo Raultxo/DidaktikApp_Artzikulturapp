@@ -71,6 +71,7 @@
 
     <!--  texto explicacion  -->
     <TextView
+        android:id="@+id/texto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -78,5 +79,21 @@
         android:layout_below="@+id/layoutAudio"
         android:text="@string/explicacion_act4"/>
 
+    <!--  Imagen  -->
+    <ImageView
+        android:id="@+id/imgCambio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texto"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/queseria_mapa"/>
+    <TextView
+        android:id="@+id/textoImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgCambio"
+        android:layout_centerHorizontal="true"
+        android:text="Localizacion de la queseria"/>
 
 </RelativeLayout>
