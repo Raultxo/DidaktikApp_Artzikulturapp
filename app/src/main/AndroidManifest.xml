@@ -54,5 +54,8 @@
         <activity android:name=".Act3_Fin"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".Act3_PruebaDibujo"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 </manifest>

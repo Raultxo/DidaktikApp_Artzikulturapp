@@ -28,7 +28,8 @@ public class Main_VentanaDeveloper extends AppCompatActivity {
         //botones
         Button btnVolver = findViewById(R.id.btnVolver);
         btnVolver.setOnClickListener(view -> {
-            finish();
+            Intent intent = new Intent(Main_VentanaDeveloper.this, Main_Activity.class);
+            startActivity(intent);
             overridePendingTransition(0,0);
         });
 
@@ -101,8 +102,8 @@ public class Main_VentanaDeveloper extends AppCompatActivity {
 
         if(v.equals(btnAct8)){
             System.out.println("Click en actividad 8");
-            //Intent intent = new Intent(Main_VentanaDeveloper.this, Actividad8.class);
-            //startActivity(intent);
+            Intent intent = new Intent(Main_VentanaDeveloper.this, Act3_PruebaDibujo.class);
+            startActivity(intent);
         }
     }
 }
