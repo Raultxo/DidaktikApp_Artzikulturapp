@@ -77,8 +77,8 @@ public class Main_VentanaDeveloper extends AppCompatActivity {
         }
 
         if(v.equals(btnAct4)){
-            // Intent intent = new Intent(Main_VentanaDeveloper.this, Actividad4.class);
-            // startActivity(intent);
+             Intent intent = new Intent(Main_VentanaDeveloper.this, Act4_Inicio.class);
+             startActivity(intent);
             System.out.println("Click en actividad 4");
         }
 
