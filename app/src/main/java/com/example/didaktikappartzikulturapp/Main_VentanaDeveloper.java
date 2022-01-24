@@ -10,7 +10,7 @@ import java.util.Objects;
 
 public class Main_VentanaDeveloper extends AppCompatActivity {
 
-    private Button btnAct1, btnAct2, btnAct3, btnAct4, btnAct5, btnAct6, btnAct7, btnAct8;
+    private Button btnAct1, btnAct2, btnAct3, btnAct4, btnAct5, btnAct6, btnAct7, btnAct8, btnMapa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class Main_VentanaDeveloper extends AppCompatActivity {
         btnAct6 = findViewById(R.id.actividad6);
         btnAct7 = findViewById(R.id.actividad7);
         btnAct8 = findViewById(R.id.actividad8);
-
+        btnMapa = findViewById(R.id.btnMapa);
     }
 
     @Override
@@ -103,6 +103,12 @@ public class Main_VentanaDeveloper extends AppCompatActivity {
         if(v.equals(btnAct8)){
             System.out.println("Click en actividad 8");
             Intent intent = new Intent(Main_VentanaDeveloper.this, Act3_PruebaDibujo.class);
+            startActivity(intent);
+        }
+
+        if(v.equals(btnMapa)){
+            System.out.println("Click en Mapa");
+            Intent intent = new Intent(Main_VentanaDeveloper.this, Mapa.class);
             startActivity(intent);
         }
     }

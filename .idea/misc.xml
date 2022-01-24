@@ -22,6 +22,8 @@
         <entry key="app/src/main/res/layout/fragment_listado_grupos.xml" value="0.33" />
         <entry key="app/src/main/res/layout/listado_grupos.xml" value="0.5" />
         <entry key="app/src/main/res/layout/listitem_grupo.xml" value="0.365625" />
+        <entry key="app/src/main/res/layout/main_ventana_developer.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/mapa.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/prueba_animacion.xml" value="0.2033514492753623" />
         <entry key="app/src/main/res/layout/textview_sopa.xml" value="0.2056159420289855" />
         <entry key="app/src/main/res/layout/ventana_developer.xml" value="0.3451086956521739" />

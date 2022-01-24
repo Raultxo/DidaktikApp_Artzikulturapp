@@ -2,5 +2,5 @@
     <string name="app_name">Artzikulturapp</string>
     <string name="name">DidaktikApp Artzikulturapp</string>
     <string name="explicacion_act4">Artziniegara heldu baino lehen, errepidetik gertu gaztandegi txiki bat dago. Gaztandegi honetan, gaztagileak bere onddo-andui propioak hazten ditu, benetan emaitza harrigarriak lortu arte. Gazta bikainak dira, eta horien artean ahuntz-gazta urdina topatu dezakegu. Gaztagileak, gazta ezberdinak garatzeko ahaleginean eta grinan, ahuntz-esneari Penicilium roqueforti onddoa eranstea pentsatu zuen. Emaitza, aditu askoren arabera, munduko ahuntz-gazta urdinarik hoberena da. Eta zuei… gazta gustatzen zaizue? Ahuntz-gazta urdin goxo hau probatuko zenukete? Ñam, ñam! Gonbidatuta zaudete!</string>
-
+    <string name="mapbox_access_token">pk.eyJ1Ijoic3RhdGljdm9pZCIsImEiOiJja3lzZjl0ZzQxMnZxMnBvM2cxeW0xdnM1In0.b9nxQHxFzQrRHWd6eHq70Q</string>
 </resources>

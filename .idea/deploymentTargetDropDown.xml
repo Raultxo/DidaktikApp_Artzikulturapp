@@ -7,11 +7,11 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="$USER_HOME$/.android/avd/Xiaomi_mi8.avd" />
+            <value value="$USER_HOME$/.android/avd/Nougat.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2021-12-23T10:29:28.482294Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-01-24T09:14:05.533283Z" />
   </component>
 </project>
