@@ -64,12 +64,12 @@ public class Act4_Inicio extends AppCompatActivity {
         });
 
         // Boton para continuar
-        btnContinuar = findViewById(R.id.btnContinuar);
-   /*    btnContinuar.setOnClickListener(view -> {
+       btnContinuar = findViewById(R.id.btnContinuar);
+       btnContinuar.setOnClickListener(view -> {
             Intent intent = new Intent(Act4_Inicio.this, Act4_Juego.class);
             startActivity(intent);
         });
-    */
+
         // imagenes y texto
         textView = findViewById(R.id.texto);
         imgCambio = findViewById(R.id.imgCambio);

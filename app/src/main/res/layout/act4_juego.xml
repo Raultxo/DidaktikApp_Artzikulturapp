@@ -39,11 +39,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
-            android:layout_width="74dp"
-            android:layout_height="74dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="26dp"
+            android:layout_alignParentLeft="true"
             android:background="@color/color1"
             android:backgroundTint="@color/color1"
             app:cardCornerRadius="250dp">
@@ -51,7 +53,7 @@
             <ImageButton
                 android:id="@+id/btnAudio"
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
+                android:layout_height="60dp"
                 android:background="@color/color1"
                 android:src="@android:drawable/ic_media_play"
                 tools:ignore="SpeakableTextPresentCheck" />
@@ -61,54 +63,61 @@
             android:id="@+id/progress"
             android:layout_width="237dp"
             android:layout_height="22dp"
-            android:layout_below="@+id/cardView2"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp" />
-
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/cardView2" />
     </RelativeLayout>
 
 
-    <!--  texto explicacion  -->
-    <ScrollView
-        android:id="@+id/idScroll"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginLeft="9dp"
-        android:layout_below="@+id/layoutAudio">
-        <TextView
-            android:id="@+id/texto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="17dp"/>
-    </ScrollView>
-
-    <!--  Imagen  -->
-    <ImageView
-        android:id="@+id/imgCambio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/idScroll"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/queseria_mapa" />
+    <!-- juego  -->
     <TextView
-        android:id="@+id/textoImagen"
+        android:id="@+id/txta4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgCambio"
-        android:layout_centerHorizontal="true"
-        android:text="Localizacion de la queseria"/>
+        android:layout_marginTop="20dp"
+        android:text="Ordena las imagenes "
+        android:layout_below="@+id/layoutAudio"
+        android:layout_centerHorizontal="true"/>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txta4"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="7dp"/>
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_margin="7dp"/>
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/img1"
+            android:layout_margin="7dp"/>
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/img2"
+            android:layout_toRightOf="@+id/img3"
+            android:layout_margin="7dp"/>
+
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/btnContinuar"
+        android:id="@+id/btnComprobar"
         android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:insetBottom="0dp"
-        android:layout_alignParentBottom="true"
-        android:text="Jarraitu"
-        android:textSize="20sp"/>
+        android:layout_height="wrap_content"
+        android:text="comprobar"/>
 
 </RelativeLayout>
