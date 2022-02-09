@@ -1,18 +1,24 @@
 package com.example.didaktikappartzikulturapp;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Act4_Juego extends AppCompatActivity {
@@ -25,6 +31,8 @@ public class Act4_Juego extends AppCompatActivity {
     //juego
     private ImageView img1, img2, img3,img4;
     private Button btnComprobar;
+    private EditText resp1,resp2,resp3,resp4;
+    private HashMap<EditText ,String> solucion ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,7 +69,6 @@ public class Act4_Juego extends AppCompatActivity {
 
         progress = (SeekBar) findViewById(R.id.progress);
         progress.setMax(mp.getDuration());
-
         progress.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -79,6 +86,23 @@ public class Act4_Juego extends AppCompatActivity {
             }
         });
 
+
+        ///// juego
+        colocarImagenes();
+        llenarSoluciones();
+
+        btnComprobar = findViewById(R.id.btnComprobar);
+        btnComprobar.setOnClickListener(view -> {
+            if(comprobar())
+            {
+                Intent intento = new Intent(Act4_Juego.this, Act4_Fin.class);
+                startActivity(intento);
+            }
+        });
+    }
+
+    private void colocarImagenes()
+    {
         // imagenes juego
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
@@ -89,9 +113,50 @@ public class Act4_Juego extends AppCompatActivity {
         img2.setImageResource(R.drawable.juego4_2);
         img3.setImageResource(R.drawable.juego4_4);
         img4.setImageResource(R.drawable.juego4_1);
-
-        btnComprobar = findViewById(R.id.btnComprobar);
     }
+
+    public void llenarSoluciones()
+    {
+        solucion = new HashMap<EditText,String>();
+
+        resp1 = findViewById(R.id.resp1);
+        resp2 = findViewById(R.id.resp2);
+        resp3 = findViewById(R.id.resp3);
+        resp4 = findViewById(R.id.resp4);
+
+        solucion.put(resp1,"c");
+        solucion.put(resp2,"b");
+        solucion.put(resp3,"d");
+        solucion.put(resp4,"a");
+
+    }
+
+    public boolean comprobar()
+    {
+        boolean seguir = true;
+        Iterator<EditText> it = solucion.keySet().iterator();
+        while(it.hasNext())
+        {
+            EditText ed = it.next();
+            String resp = ed.getText().toString();
+            String solu = solucion.get(ed);
+            if(solu.equals(resp))  // respuesta es correcta
+            {
+                ed.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.correcto));
+                ed.setEnabled(false);
+            }
+            else
+            {
+                seguir = false;
+                ed.setText("");
+            }
+
+        }
+        return seguir;
+    }
+
+
+
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {

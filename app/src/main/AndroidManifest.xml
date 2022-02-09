@@ -63,6 +63,12 @@
         <activity android:name=".Act4_Inicio"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".Act4_Juego"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Act4_Fin"
+            android:screenOrientation="portrait">
+        </activity>
         <activity android:name=".Mapa"
             android:screenOrientation="portrait">
         </activity>
