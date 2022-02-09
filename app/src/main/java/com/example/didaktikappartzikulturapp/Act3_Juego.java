@@ -58,46 +58,44 @@ public class Act3_Juego extends AppCompatActivity {
         TextView resultado = findViewById(R.id.resultado);
 
         GridView sopa = findViewById(R.id.sopa);
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA " + sopa.getHeight() + " " + sopa.getMeasuredHeight() + " " + sopa.getMinimumHeight());
-        Act3_PruebaLinea linea = findViewById(R.id.linea);
-        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(40, 40, 40, 1000);
-        linea.setLayoutParams(lp);
-
+//        Act3_PruebaLinea linea = findViewById(R.id.linea);
+//        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+//        lp.setMargins(40, 40, 40, 1000);
+//        linea.setLayoutParams(lp);
         ArrayAdapter<String> listaAdapter = new ArrayAdapter<>(this, R.layout.act3_textview_sopa, letras);
         sopa.setAdapter(listaAdapter);
 
-//        final String[] anterior = {""};
-//        sopa.setOnTouchListener((view, motionEvent) -> {
-//            for(int i = 0; i < sopa.getChildCount(); i++) {
-//                View v = sopa.getChildAt(i);
-//                Rect outRecto = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
-//                if(outRecto.contains((int)motionEvent.getX(), (int)motionEvent.getY())) {
-//                    if(!((TextView) v).getText().equals(anterior[0])) {
-//                        resultado.append(((TextView) v).getText());
-//                        anterior[0] = (String) ((TextView) v).getText();
-//                        boolean posible = false;
-//                        for(TextView palabra : palabras.keySet()) {
-//                            if(!palabras.get(palabra)) {
-//                                if (palabra.getText().toString().toUpperCase().startsWith(resultado.getText().toString())) {
-//                                    posible = true;
-//                                }
-//                                if (palabra.getText().toString().toUpperCase().equals(resultado.getText().toString())) {
-//                                    palabra.setVisibility(View.INVISIBLE);
-//                                    palabras.put(palabra, true);
-//                                    comprobarMapa();
-//                                    resultado.setText("");
-//                                }
-//                            }
-//                        }
-//                        if(!posible) {
-//                            resultado.setText("");
-//                        }
-//                    }
-//                }
-//            }
-//            return false;
-//        });
+        final String[] anterior = {""};
+        sopa.setOnTouchListener((view, motionEvent) -> {
+            for(int i = 0; i < sopa.getChildCount(); i++) {
+                View v = sopa.getChildAt(i);
+                Rect outRecto = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                if(outRecto.contains((int)motionEvent.getX(), (int)motionEvent.getY())) {
+                    if(!((TextView) v).getText().equals(anterior[0])) {
+                        resultado.append(((TextView) v).getText());
+                        anterior[0] = (String) ((TextView) v).getText();
+                        boolean posible = false;
+                        for(TextView palabra : palabras.keySet()) {
+                            if(!palabras.get(palabra)) {
+                                if (palabra.getText().toString().toUpperCase().startsWith(resultado.getText().toString())) {
+                                    posible = true;
+                                }
+                                if (palabra.getText().toString().toUpperCase().equals(resultado.getText().toString())) {
+                                    palabra.setVisibility(View.INVISIBLE);
+                                    palabras.put(palabra, true);
+                                    comprobarMapa();
+                                    resultado.setText("");
+                                }
+                            }
+                        }
+                        if(!posible) {
+                            resultado.setText("");
+                        }
+                    }
+                }
+            }
+            return false;
+        });
     }
 
     private void cargarMapa() {
