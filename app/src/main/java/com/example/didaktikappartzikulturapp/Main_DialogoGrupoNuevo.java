@@ -64,5 +64,5 @@ public class Main_DialogoGrupoNuevo extends DialogFragment {
         }
     }
 
-    public EditText getTxtGrupo() { return txtGrupo; }
+    public String getTxtGrupo() { return txtGrupo.getText().toString(); }
 }

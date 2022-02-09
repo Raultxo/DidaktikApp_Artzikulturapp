@@ -109,12 +109,13 @@
         android:id="@+id/actividad8"
         android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:onClick="abrirActividad"
         android:text="artziniegako ur-jauzia"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actividad7"
-        android:onClick="abrirActividad"/>
+        app:layout_constraintTop_toBottomOf="@+id/actividad7" />
 
     <Button
         android:id="@+id/btnMapa"
@@ -126,6 +127,16 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actividad8" />
+
+    <Button
+        android:id="@+id/btnPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ventana principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMapa"
+        android:onClick="abrirActividad"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

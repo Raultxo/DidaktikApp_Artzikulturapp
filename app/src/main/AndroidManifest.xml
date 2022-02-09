@@ -19,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Main_Datos_Grupo"
+            android:screenOrientation="portrait">
+        </activity>
         <activity android:name=".Main_VentanaGrupos"
             android:screenOrientation="portrait">
         </activity>
@@ -58,9 +61,6 @@
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".Act4_Inicio"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".Act4_Juego"
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".Mapa"
