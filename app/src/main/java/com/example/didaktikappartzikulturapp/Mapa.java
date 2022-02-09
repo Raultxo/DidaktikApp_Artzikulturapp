@@ -8,7 +8,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.constants.Style;
+import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
@@ -44,7 +46,11 @@ public class Mapa extends AppCompatActivity {
             @Override
             public void onMapReady(MapboxMap mapboxMap) {
 // Establece el estilo del mapa, puedes usar tu propio style.json
-                mapboxMap.setStyle(Style.MAPBOX_STREETS);
+                mapboxMap.setStyle(Style.SATELLITE);
+                mapboxMap.setCameraPosition(new CameraPosition.Builder()
+                        .target(new LatLng(43.121931, -3.131046))
+                        .zoom(15)
+                        .build());
             }
         });
 

@@ -106,9 +106,9 @@
         android:id="@+id/btnContinuar"
         android:layout_width="match_parent"
         android:layout_height="73dp"
-        android:insetBottom="0dp"
         android:layout_alignParentBottom="true"
+        android:insetBottom="0dp"
         android:text="Jarraitu"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
 </RelativeLayout>
