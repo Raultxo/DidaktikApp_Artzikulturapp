@@ -14,7 +14,7 @@ public class Act2_Fin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act3_fin);
+        setContentView(R.layout.act2_fin);
 
         // Quitar la barra de titulo de actividad
         Objects.requireNonNull(getSupportActionBar()).hide();

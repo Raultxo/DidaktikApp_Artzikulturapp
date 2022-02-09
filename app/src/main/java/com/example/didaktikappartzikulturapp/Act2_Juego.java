@@ -19,8 +19,7 @@ import java.util.Objects;
 public class Act2_Juego extends AppCompatActivity {
 
     private HashMap<EditText,String> respuestas;
-    private ImageView imgFin, imgB;
-    private TextView lblFin;
+    private ImageView  imgB;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,15 +33,6 @@ public class Act2_Juego extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
 
         llenarDiccionario();
-
-        //para el fin de la actividad
-        imgFin = (ImageView) findViewById(R.id.imgFin);
-        imgB = (ImageView) findViewById(R.id.imgBoc);
-        lblFin = (TextView) findViewById(R.id.lblFin);
-        imgB.setVisibility(View.GONE);
-        imgFin.setVisibility(View.GONE);
-        lblFin.setVisibility(View.GONE);
-
 
         //audio
         Button btnAudio = (Button) findViewById(R.id.btnAudio);

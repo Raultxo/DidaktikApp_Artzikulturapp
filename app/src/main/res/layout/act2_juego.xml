@@ -424,34 +424,4 @@
                   android:text="alboan"/>
       </TableRow>
   </TableLayout>
-
-    <!--  Fin de la actividad  -->
-    <ImageView
-        android:id="@+id/imgFin"
-        android:layout_width="209dp"
-        android:layout_height="447dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginBottom="-37dp"
-        android:src="@drawable/dontzeila" />
-
-    <ImageView
-        android:id="@+id/imgBoc"
-        android:layout_width="match_parent"
-        android:layout_height="296dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="307dp"
-        android:src="@drawable/bocadillo_izq" />
-
-    <TextView
-        android:id="@+id/lblFin"
-        android:layout_width="309dp"
-        android:layout_height="116dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="397dp"
-        android:padding="12dp"
-        android:textSize="17dp" />
-
 </RelativeLayout>
