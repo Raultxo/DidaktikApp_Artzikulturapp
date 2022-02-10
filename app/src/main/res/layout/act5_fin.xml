@@ -8,13 +8,13 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="141dp"
+        android:layout_width="170dp"
         android:layout_height="257dp"
         android:layout_marginTop="176dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/eliz_gizona" />
+        app:srcCompat="@drawable/zalduna" />
 
     <TextView
         android:id="@+id/textView5"

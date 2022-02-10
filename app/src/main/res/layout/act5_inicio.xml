@@ -6,6 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".Act5_Inicio">
 
+    <!--   Volver   -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.1"
+        android:background="@color/color1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_revert"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Atzera"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <!-- video -->
     <Button
         android:id="@+id/btnContinuar2"
         android:layout_width="0dp"

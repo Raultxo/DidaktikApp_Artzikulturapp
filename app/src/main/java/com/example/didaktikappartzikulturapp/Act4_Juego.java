@@ -124,10 +124,10 @@ public class Act4_Juego extends AppCompatActivity {
         resp3 = findViewById(R.id.resp3);
         resp4 = findViewById(R.id.resp4);
 
-        solucion.put(resp1,"c");
+        solucion.put(resp1,"d");
         solucion.put(resp2,"b");
-        solucion.put(resp3,"d");
-        solucion.put(resp4,"a");
+        solucion.put(resp3,"a");
+        solucion.put(resp4,"c");
 
     }
 
@@ -156,8 +156,7 @@ public class Act4_Juego extends AppCompatActivity {
     }
 
 
-
-
+    // Metodo para que quite la barra de navegacion, notificaciones, etc cuando se cambia el focus
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);

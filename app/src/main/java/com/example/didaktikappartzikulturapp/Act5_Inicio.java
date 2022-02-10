@@ -7,13 +7,17 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import java.util.HashMap;
 
 public class Act5_Inicio extends AppCompatActivity {
 
     private VideoView video;
     private Button btnContinuar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,14 @@ public class Act5_Inicio extends AppCompatActivity {
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
+
+        // vuelver
+        Button btnVolver = findViewById(R.id.btnVolver);
+        btnVolver.setOnClickListener(view -> {
+            finish();
+            overridePendingTransition(0, 0);
+        });
+
 
         String path = "android.resource://" + getPackageName() + "/" + R.raw.act5_video;
         video = findViewById(R.id.videoAct5);
