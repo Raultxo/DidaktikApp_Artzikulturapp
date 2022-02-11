@@ -1,12 +1,16 @@
 package com.example.didaktikappartzikulturapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.mapbox.geojson.Feature;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.constants.Style;
@@ -15,6 +19,7 @@ import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Mapa extends AppCompatActivity {
@@ -43,16 +48,54 @@ public class Mapa extends AppCompatActivity {
         mapView.onCreate(savedInstanceState);
 // Establece la función de devolución de llamada del mapa, similar a map.on ()
         mapView.getMapAsync(new OnMapReadyCallback() {
+            @SuppressLint("WrongConstant")
             @Override
             public void onMapReady(MapboxMap mapboxMap) {
 // Establece el estilo del mapa, puedes usar tu propio style.json
-                mapboxMap.setStyle(Style.SATELLITE);
+                mapboxMap.setStyle("mapbox://styles/staticvoid/ckziccrh5001k15p1k586ti0k");
                 mapboxMap.setCameraPosition(new CameraPosition.Builder()
-                        .target(new LatLng(43.121931, -3.131046))
-                        .zoom(15)
+                        .target(new LatLng(43.121353, -3.134898))
+                        .zoom(14)
                         .build());
+
+                mapboxMap.addOnMapClickListener(new MapboxMap.OnMapClickListener() {
+                    @Override
+                    public void onMapClick(@NonNull LatLng point) {
+                        PointF finalPoint = mapboxMap.getProjection().toScreenLocation(point);
+                        List<Feature> features = mapboxMap.queryRenderedFeatures(finalPoint);
+                        for (Feature feature : features) {
+                            String title = null;
+                            if (feature.getProperty("title") != null) {
+                                title = feature.getProperty("title").toString();
+                            }
+                            System.out.println("asdaaaa      asdasd        :"+title);
+                            if (title != null) {
+                                Intent intent = null;
+                                if (title.contains("1")) {
+                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                } else if (title.contains("2")) {
+                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                } else if (title.contains("3")) {
+                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                } else if (title.contains("4")) {
+                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                } else if (title.contains("5")) {
+                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                } else if (title.contains("6")) {
+                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                } else if (title.contains("7")) {
+                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                }
+                                if (intent != null) startActivity(intent);
+                            }
+                        }
+                        ;
+                    }
+                });
             }
         });
+
+
 
     }
 
