@@ -156,6 +156,7 @@ public class Act5_Juego extends AppCompatActivity {
     public void ponerBonito()
     {
         Iterator<EditText> it = solucion.keySet().iterator();
+        EditText aux=null;
         while(it.hasNext())
         {
             EditText ed = it.next();
@@ -163,6 +164,9 @@ public class Act5_Juego extends AppCompatActivity {
             ed.setBackgroundResource(R.color.itemLista);
             ed.setPadding(38,0,10,0);
             ed.setInputType(InputType.TYPE_CLASS_TEXT);
+            if(aux!=null) // para evitar el primero
+                ed.setNextFocusForwardId(aux.getId()); // tab order
+            aux=ed;
         }
     }
 }

@@ -30,8 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-    <!--  botones  -->
-
+    <!--  corregir  -->
     <Button
         android:id="@+id/btnCorregir"
         android:layout_width="wrap_content"
@@ -50,6 +49,7 @@
         android:layout_below="@id/btnCorregir"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp">
+
         <!-- CRUCIGRAMA infinitooooo -->
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -62,21 +62,27 @@
                 android:layout_height="35dp"
                 android:layout_toEndOf="@id/resp11"
                 android:hint="1"
-                android:textColorHint="@color/color3"/>
+                android:nextFocusDown="@+id/resp2"
+                android:textColorHint="@color/color3" />
+
             <EditText
                 android:id="@+id/resp2"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp1"
                 android:layout_marginTop="1dp"
-                android:layout_toEndOf="@id/resp11"/>
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusDown="@+id/resp3" />
+
             <EditText
                 android:id="@+id/resp3"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp2"
                 android:layout_marginTop="1dp"
-                android:layout_toEndOf="@id/resp11"/>
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusDown="@+id/resp4" />
+
             <EditText
                 android:id="@+id/resp4"
                 android:layout_width="35dp"
@@ -95,6 +101,8 @@
                 android:nextFocusForward="@+id/resp6"
                 android:singleLine="true" />
 
+         <!-- -->
+
             <EditText
                 android:id="@+id/resp6"
                 android:layout_width="35dp"
@@ -102,8 +110,8 @@
                 android:layout_below="@id/resp5"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@id/resp11"
-                android:nextFocusForward="@+id/resp7"
-                android:singleLine="true" />
+                android:nextFocusDown="@+id/resp7"/>
+
             <EditText
                 android:id="@+id/resp7"
                 android:layout_width="35dp"
@@ -112,20 +120,22 @@
                 android:layout_alignBottom="@+id/resp11"
                 android:layout_marginTop="1dp"
                 android:layout_toEndOf="@id/resp11"/>
+
             <EditText
                 android:id="@+id/resp8"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp7"
                 android:layout_marginTop="1dp"
-                android:layout_toEndOf="@id/resp11"/>
+                android:layout_toEndOf="@id/resp11" />
+
             <EditText
                 android:id="@+id/resp9"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp8"
                 android:layout_marginTop="1dp"
-                android:layout_toEndOf="@id/resp11"/>
+                android:layout_toEndOf="@id/resp11" />
 
             <EditText
                 android:id="@+id/resp10"
@@ -133,7 +143,8 @@
                 android:layout_height="35dp"
                 android:layout_below="@id/resp9"
                 android:layout_marginTop="1dp"
-                android:layout_toEndOf="@id/resp11" />
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusDown="@+id/resp11" />
 
 
             <!-- alkatea -->
@@ -146,13 +157,15 @@
                 android:layout_marginRight="1dp"
                 android:hint="5"
                 android:textColorHint="@color/color3"/>
+
             <EditText
                 android:id="@+id/resp12"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp6"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp7"/>
+                android:layout_toEndOf="@id/resp7" />
+
             <EditText
                 android:id="@+id/resp13"
                 android:layout_width="35dp"
@@ -160,27 +173,32 @@
                 android:layout_below="@id/resp6"
                 android:layout_marginLeft="1dp"
                 android:layout_toEndOf="@id/resp12"/>
+
             <EditText
                 android:id="@+id/resp14"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp6"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp13"/>
+                android:layout_toEndOf="@id/resp13" />
+
             <EditText
                 android:id="@+id/resp15"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp6"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp14"/>
+                android:layout_toEndOf="@id/resp14"
+                android:nextFocusRight="@id/resp16" />
+
             <EditText
                 android:id="@+id/resp16"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp6"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp15"/>
+                android:layout_toEndOf="@id/resp15"
+                android:nextFocusUp="@id/resp17" />
 
             <!-- jatetxea -->
             <EditText
@@ -191,14 +209,17 @@
                 android:layout_alignStart="@id/resp15"
                 android:layout_marginBottom="1dp"
                 android:hint="2"
-                android:textColorHint="@color/color3"/>
+                android:nextFocusDown="@id/resp18"
+                android:textColorHint="@color/color3" />
+
             <EditText
                 android:id="@+id/resp18"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_above="@id/resp19"
                 android:layout_alignStart="@id/resp15"
-                android:layout_marginBottom="1dp"/>
+                android:layout_marginBottom="1dp"
+                android:nextFocusDown="@id/resp19" />
 
             <EditText
                 android:id="@+id/resp19"
@@ -206,7 +227,8 @@
                 android:layout_height="35dp"
                 android:layout_above="@id/resp15"
                 android:layout_alignStart="@id/resp15"
-                android:layout_marginBottom="1dp"/>
+                android:layout_marginBottom="1dp"
+                android:nextFocusDown="@id/resp20"/>
 
             <EditText
                 android:id="@+id/resp20"
@@ -214,28 +236,31 @@
                 android:layout_height="35dp"
                 android:layout_below="@id/resp15"
                 android:layout_alignStart="@id/resp15"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
+
             <EditText
                 android:id="@+id/resp21"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp20"
                 android:layout_alignStart="@id/resp15"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
+
             <EditText
                 android:id="@+id/resp22"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp21"
                 android:layout_alignStart="@id/resp15"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
+
             <EditText
                 android:id="@+id/resp23"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp22"
                 android:layout_alignStart="@id/resp15"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
 
             <!-- lau -->
             <EditText
@@ -246,14 +271,15 @@
                 android:layout_marginRight="1dp"
                 android:layout_toStartOf="@id/resp23"
                 android:hint="6"
-                android:textColorHint="@color/color3"/>
+                android:textColorHint="@color/color3" />
+
             <EditText
                 android:id="@+id/resp25"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_alignTop="@id/resp23"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp23"/>
+                android:layout_toEndOf="@id/resp23" />
 
             <!-- hamasei -->
             <EditText
@@ -264,7 +290,7 @@
                 android:layout_marginRight="1dp"
                 android:layout_toStartOf="@id/resp18"
                 android:hint="4"
-                android:textColorHint="@color/color3"/>
+                android:textColorHint="@color/color3" />
 
             <EditText
                 android:id="@+id/resp27"
@@ -272,7 +298,7 @@
                 android:layout_height="35dp"
                 android:layout_alignTop="@id/resp18"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp18"/>
+                android:layout_toEndOf="@id/resp18" />
 
             <EditText
                 android:id="@+id/resp28"
@@ -280,7 +306,7 @@
                 android:layout_height="35dp"
                 android:layout_alignTop="@id/resp18"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp27"/>
+                android:layout_toEndOf="@id/resp27" />
 
             <EditText
                 android:id="@+id/resp29"
@@ -288,7 +314,7 @@
                 android:layout_height="35dp"
                 android:layout_alignTop="@id/resp18"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp28"/>
+                android:layout_toEndOf="@id/resp28" />
 
             <EditText
                 android:id="@+id/resp30"
@@ -296,7 +322,7 @@
                 android:layout_height="35dp"
                 android:layout_alignTop="@id/resp18"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp29"/>
+                android:layout_toEndOf="@id/resp29" />
 
             <EditText
                 android:id="@+id/resp31"
@@ -304,7 +330,7 @@
                 android:layout_height="35dp"
                 android:layout_alignTop="@id/resp18"
                 android:layout_marginLeft="1dp"
-                android:layout_toEndOf="@id/resp30"/>
+                android:layout_toEndOf="@id/resp30" />
 
             <!-- militarra -->
             <EditText
@@ -315,28 +341,31 @@
                 android:layout_alignStart="@id/resp31"
                 android:layout_marginBottom="1dp"
                 android:hint="3"
-                android:textColorHint="@color/color3"/>
+                android:textColorHint="@color/color3" />
+
             <EditText
                 android:id="@+id/resp33"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp31"
                 android:layout_alignStart="@id/resp31"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
+
             <EditText
                 android:id="@+id/resp34"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp33"
                 android:layout_alignStart="@id/resp31"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
+
             <EditText
                 android:id="@+id/resp35"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_below="@id/resp34"
                 android:layout_alignStart="@id/resp31"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
 
             <EditText
                 android:id="@+id/resp36"
@@ -344,7 +373,7 @@
                 android:layout_height="35dp"
                 android:layout_below="@id/resp35"
                 android:layout_alignStart="@id/resp31"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
 
             <EditText
                 android:id="@+id/resp37"
@@ -352,7 +381,7 @@
                 android:layout_height="35dp"
                 android:layout_below="@id/resp36"
                 android:layout_alignStart="@id/resp31"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
 
             <EditText
                 android:id="@+id/resp38"
@@ -360,7 +389,7 @@
                 android:layout_height="35dp"
                 android:layout_below="@id/resp37"
                 android:layout_alignStart="@id/resp31"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
 
             <EditText
                 android:id="@+id/resp39"
@@ -368,7 +397,7 @@
                 android:layout_height="35dp"
                 android:layout_below="@id/resp38"
                 android:layout_alignStart="@id/resp31"
-                android:layout_marginTop="1dp"/>
+                android:layout_marginTop="1dp" />
         </RelativeLayout>
     </HorizontalScrollView>
 
@@ -384,15 +413,15 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/lblHorizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp" />
-
-            <TextView
                 android:id="@+id/lblVertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/lblHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
