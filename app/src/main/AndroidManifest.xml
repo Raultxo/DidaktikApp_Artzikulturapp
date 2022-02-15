@@ -75,5 +75,11 @@
         <activity android:name=".Act5_Inicio"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".Act5_Juego"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Act5_Fin"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 </manifest>

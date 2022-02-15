@@ -2,9 +2,13 @@ package com.example.didaktikappartzikulturapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +23,7 @@ public class Act5_Juego extends AppCompatActivity {
 
     private Button btnCorregir;
     private HashMap<EditText,String> solucion;
+    private TextView txtH, txtV;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +44,19 @@ public class Act5_Juego extends AppCompatActivity {
         });
 
         llenarSolucion();
+       // aniadirListener();
+
+        txtH = findViewById(R.id.lblHorizontal);
+        txtH.setText("HORIZONTAL \n" +
+                "4. Mende honetan eraiki zen dorretxea \n" +
+                "5. Nor zen Diego Ortiz de Molinillo Velasco jauna? \n" +
+                "6. Fatxada nagusiko solairuak \n");
+
+        txtV = findViewById(R.id.lblVertical);
+        txtV.setText("VERTICAL \n" +
+                "1. Plaza honetarako bidean dago dorretxa \n" +
+                "2. Zer da gaur gun? \n" +
+                "3. Zein da corretxearen jatorria?");
 
         btnCorregir = findViewById(R.id.btnCorregir);
         btnCorregir.setOnClickListener(view -> {
@@ -62,8 +80,10 @@ public class Act5_Juego extends AppCompatActivity {
             String solu = solucion.get(ed);
             if(solu.equals(resp))  // respuesta es correcta
             {
+                ed.setText(resp);
                 ed.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.correcto));
                 ed.setEnabled(false);
+
             }
             else
             {
@@ -82,73 +102,67 @@ public class Act5_Juego extends AppCompatActivity {
         solucion.put(findViewById(R.id.resp1),"G");
         solucion.put(findViewById(R.id.resp2),"O");
         solucion.put(findViewById(R.id.resp3),"I");
-        solucion.put(findViewById(R.id.resp1),"K");
-        solucion.put(findViewById(R.id.resp1),"O");
-        solucion.put(findViewById(R.id.resp1),"P");
-        solucion.put(findViewById(R.id.resp1),"L");
-        solucion.put(findViewById(R.id.resp1),"A");
-        solucion.put(findViewById(R.id.resp1),"Z");
-        solucion.put(findViewById(R.id.resp1),"A");
+        solucion.put(findViewById(R.id.resp4),"K");
+        solucion.put(findViewById(R.id.resp5),"O");
+        solucion.put(findViewById(R.id.resp6),"P");
+        solucion.put(findViewById(R.id.resp7),"L");
+        solucion.put(findViewById(R.id.resp8),"A");
+        solucion.put(findViewById(R.id.resp9),"Z");
+        solucion.put(findViewById(R.id.resp10),"A");
 
         // ALKATEA (usa la 'L' de plaza)
-        solucion.put(findViewById(R.id.resp1),"A");
-        solucion.put(findViewById(R.id.resp1),"K");
-        solucion.put(findViewById(R.id.resp1),"A");
-        solucion.put(findViewById(R.id.resp1),"T");
-        solucion.put(findViewById(R.id.resp1),"E");
-        solucion.put(findViewById(R.id.resp1),"A");
+        solucion.put(findViewById(R.id.resp11),"A");
+        solucion.put(findViewById(R.id.resp12),"K");
+        solucion.put(findViewById(R.id.resp13),"A");
+        solucion.put(findViewById(R.id.resp14),"T");
+        solucion.put(findViewById(R.id.resp15),"E");
+        solucion.put(findViewById(R.id.resp16),"A");
 
         // JATETXEA (usa la 'E' de alkatea)
-        solucion.put(findViewById(R.id.resp1),"J");
-        solucion.put(findViewById(R.id.resp1),"A");
-        solucion.put(findViewById(R.id.resp1),"T");
-        solucion.put(findViewById(R.id.resp1),"T");
-        solucion.put(findViewById(R.id.resp1),"X");
-        solucion.put(findViewById(R.id.resp1),"E");
-        solucion.put(findViewById(R.id.resp1),"A");
+        solucion.put(findViewById(R.id.resp17),"J");
+        solucion.put(findViewById(R.id.resp18),"A");
+        solucion.put(findViewById(R.id.resp19),"T");
+        solucion.put(findViewById(R.id.resp20),"T");
+        solucion.put(findViewById(R.id.resp21),"X");
+        solucion.put(findViewById(R.id.resp22),"E");
+        solucion.put(findViewById(R.id.resp23),"A");
 
         // LAU (usa la ultima 'A' de jatetxea)
-        solucion.put(findViewById(R.id.resp1),"L");
-        solucion.put(findViewById(R.id.resp1),"U");
+        solucion.put(findViewById(R.id.resp24),"L");
+        solucion.put(findViewById(R.id.resp25),"U");
 
         // HAMASEI (usa la primera 'A' de jatetxea)
-        solucion.put(findViewById(R.id.resp1),"H");
-        solucion.put(findViewById(R.id.resp1),"M");
-        solucion.put(findViewById(R.id.resp1),"A");
-        solucion.put(findViewById(R.id.resp1),"S");
-        solucion.put(findViewById(R.id.resp1),"E");
-        solucion.put(findViewById(R.id.resp1),"I");
+        solucion.put(findViewById(R.id.resp26),"H");
+        solucion.put(findViewById(R.id.resp27),"M");
+        solucion.put(findViewById(R.id.resp28),"A");
+        solucion.put(findViewById(R.id.resp29),"S");
+        solucion.put(findViewById(R.id.resp30),"E");
+        solucion.put(findViewById(R.id.resp31),"I");
 
         // MILITARRA (usa la 'I' de hamasei)
-        solucion.put(findViewById(R.id.resp1),"M");
-        solucion.put(findViewById(R.id.resp1),"L");
-        solucion.put(findViewById(R.id.resp1),"I");
-        solucion.put(findViewById(R.id.resp1),"T");
-        solucion.put(findViewById(R.id.resp1),"A");
-        solucion.put(findViewById(R.id.resp1),"R");
-        solucion.put(findViewById(R.id.resp1),"R");
-        solucion.put(findViewById(R.id.resp1),"A");
+        solucion.put(findViewById(R.id.resp32),"M");
+        solucion.put(findViewById(R.id.resp33),"L");
+        solucion.put(findViewById(R.id.resp34),"I");
+        solucion.put(findViewById(R.id.resp35),"T");
+        solucion.put(findViewById(R.id.resp36),"A");
+        solucion.put(findViewById(R.id.resp37),"R");
+        solucion.put(findViewById(R.id.resp38),"R");
+        solucion.put(findViewById(R.id.resp39),"A");
 
-        // BARROKOA (usa la ultima 'A' de militarra)
-        solucion.put(findViewById(R.id.resp1),"B");
-        solucion.put(findViewById(R.id.resp1),"R");
-        solucion.put(findViewById(R.id.resp1),"R");
-        solucion.put(findViewById(R.id.resp1),"O");
-        solucion.put(findViewById(R.id.resp1),"K");
-        solucion.put(findViewById(R.id.resp1),"O");
-        solucion.put(findViewById(R.id.resp1),"A");
-
-        // AIARA DORREA (usa la 'R' de barrokoa)
-        solucion.put(findViewById(R.id.resp47),"A");
-        solucion.put(findViewById(R.id.resp48),"I");
-        solucion.put(findViewById(R.id.resp49),"A");
-        solucion.put(findViewById(R.id.resp50),"A");
-        solucion.put(findViewById(R.id.resp51),"D");
-        solucion.put(findViewById(R.id.resp52),"O");
-        solucion.put(findViewById(R.id.resp53),"R");
-        solucion.put(findViewById(R.id.resp54),"R");
-        solucion.put(findViewById(R.id.resp55),"E");
-        solucion.put(findViewById(R.id.resp56),"A");
+        ponerBonito();
     }
 
+
+    public void ponerBonito()
+    {
+        Iterator<EditText> it = solucion.keySet().iterator();
+        while(it.hasNext())
+        {
+            EditText ed = it.next();
+            ed.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+            ed.setBackgroundResource(R.color.itemLista);
+            ed.setPadding(38,0,10,0);
+            ed.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
+    }
 }
