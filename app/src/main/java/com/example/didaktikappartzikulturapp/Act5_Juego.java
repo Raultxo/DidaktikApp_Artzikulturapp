@@ -128,7 +128,7 @@ public class Act5_Juego extends AppCompatActivity {
         solucion.put(findViewById(R.id.resp1),"R");
         solucion.put(findViewById(R.id.resp1),"R");
         solucion.put(findViewById(R.id.resp1),"A");
-
+/*
         // BARROKOA (usa la ultima 'A' de militarra)
         solucion.put(findViewById(R.id.resp1),"B");
         solucion.put(findViewById(R.id.resp1),"R");
@@ -148,7 +148,7 @@ public class Act5_Juego extends AppCompatActivity {
         solucion.put(findViewById(R.id.resp53),"R");
         solucion.put(findViewById(R.id.resp54),"R");
         solucion.put(findViewById(R.id.resp55),"E");
-        solucion.put(findViewById(R.id.resp56),"A");
+        solucion.put(findViewById(R.id.resp56),"A");  */
     }
 
 }
