@@ -52,10 +52,10 @@ public class Mapa extends AppCompatActivity {
             @Override
             public void onMapReady(MapboxMap mapboxMap) {
 // Establece el estilo del mapa, puedes usar tu propio style.json
-                mapboxMap.setStyle("mapbox://styles/staticvoid/ckziccrh5001k15p1k586ti0k");
+                mapboxMap.setStyle("mapbox://styles/staticvoid/ckznxa7uk000i14leyspm339w");
                 mapboxMap.setCameraPosition(new CameraPosition.Builder()
                         .target(new LatLng(43.121353, -3.134898))
-                        .zoom(14)
+                        .zoom(15)
                         .build());
 
                 mapboxMap.addOnMapClickListener(new MapboxMap.OnMapClickListener() {
@@ -71,20 +71,20 @@ public class Mapa extends AppCompatActivity {
                             System.out.println("asdaaaa      asdasd        :"+title);
                             if (title != null) {
                                 Intent intent = null;
-                                if (title.contains("1")) {
+                                if (title.contains("1.")) {
                                     intent = new Intent(Mapa.this, Act1_Inicio.class);
-                                } else if (title.contains("2")) {
-                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
-                                } else if (title.contains("3")) {
-                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
-                                } else if (title.contains("4")) {
-                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
-                                } else if (title.contains("5")) {
-                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
-                                } else if (title.contains("6")) {
-                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
-                                } else if (title.contains("7")) {
-                                    intent = new Intent(Mapa.this, Act1_Inicio.class);
+                                } else if (title.contains("2.")) {
+                                    intent = new Intent(Mapa.this, Act2_Inicio.class);
+                                } else if (title.contains("3.")) {
+                                    intent = new Intent(Mapa.this, Act3_Inicio.class);
+                                } else if (title.contains("4.")) {
+                                    intent = new Intent(Mapa.this, Act4_Inicio.class);
+                                } else if (title.contains("5.")) {
+                                    intent = new Intent(Mapa.this, Act5_Inicio.class);
+                                } else if (title.contains("6.")) {
+                                    //intent = new Intent(Mapa.this, Act6_Inicio.class);
+                                } else if (title.contains("7.")) {
+                                    //intent = new Intent(Mapa.this, Act7_Inicio.class);
                                 }
                                 if (intent != null) startActivity(intent);
                             }
