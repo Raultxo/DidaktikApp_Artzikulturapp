@@ -2,6 +2,7 @@ package com.example.didaktikappartzikulturapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,7 +39,7 @@ public class Act5_Inicio extends AppCompatActivity {
             overridePendingTransition(0, 0);
         });
 
-
+        ////  video
         String path = "android.resource://" + getPackageName() + "/" + R.raw.act5_video;
         video = findViewById(R.id.videoAct5);
         video.setVideoURI(Uri.parse(path));
@@ -48,8 +49,6 @@ public class Act5_Inicio extends AppCompatActivity {
         mc.setAnchorView(video);
         video.start();
 
-        btnContinuar = findViewById(R.id.btnContinuar2);
-        //Cuando termina el video se cierra la actividad
         video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
@@ -58,6 +57,15 @@ public class Act5_Inicio extends AppCompatActivity {
 
             }
         });
+
+
+        // continuar al juego
+        btnContinuar = findViewById(R.id.btnContinuar2);
+        btnContinuar.setOnClickListener(view -> {
+            Intent intento = new Intent(Act5_Inicio.this, Act5_Juego.class);
+            startActivity(intento);
+        });
+
     }
 
     @Override

@@ -34,12 +34,12 @@ public class Main_Activity extends AppCompatActivity {
             if(codigo.equals("aabbcdcd")) {
                 Toast.makeText(Main_Activity.this, "MODO DEVELOPER ACTIVADO", Toast.LENGTH_SHORT).show();
                 //Intent intent = new Intent(Main_Activity.this, Main_VentanaDeveloper.class);
-                Intent intent = new Intent(Main_Activity.this, Main_VentanaGrupos.class);
+                Intent intent = new Intent(Main_Activity.this, Main_VentanaDeveloper.class);
                 startActivity(intent);
             }
             else {
                 //Intent intent = new Intent(Main_Activity.this, Main_VentanaGrupos.class);
-                Intent intent = new Intent(Main_Activity.this, Main_VentanaDeveloper.class);
+                Intent intent = new Intent(Main_Activity.this, Main_VentanaGrupos.class);
                 startActivity(intent);
             }
             codigo = "";

@@ -43,7 +43,6 @@ public class Main_VentanaDeveloper extends AppCompatActivity {
         btnAct7 = findViewById(R.id.actividad7);
         btnAct8 = findViewById(R.id.actividad8);
         btnMapa = findViewById(R.id.btnMapa);
-        btnPrincipal = findViewById(R.id.btnPrincipal);
     }
 
     @Override
@@ -113,10 +112,5 @@ public class Main_VentanaDeveloper extends AppCompatActivity {
             startActivity(intent);
         }
 
-        if(v.equals(btnPrincipal)) {
-            System.out.println("Click en ventana principal");
-            Intent intent = new Intent(Main_VentanaDeveloper.this, Main_VentanaGrupos.class);
-            startActivity(intent);
-        }
     }
 }
