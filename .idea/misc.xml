@@ -4,6 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.3390625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act1_fin.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act1_inicio.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act1_juego.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act2_fin.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act2_inicio.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act2_juego.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act3_fin.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act3_inicio.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act3_juego.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act3_pruebadibujo.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act3_textview_sopa.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act4_fin.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act4_inicio.xml" value="0.2625" />
+        <entry key="..\:/Users/raul-/AndroidStudioProjects/DidaktikApp_Artzikulturapp/app/src/main/res/layout/act4_juego.xml" value="0.2625" />
         <entry key="app/src/main/res/layout/act1_fin.xml" value="0.365625" />
         <entry key="app/src/main/res/layout/act1_juego.xml" value="0.365625" />
         <entry key="app/src/main/res/layout/act2_fin.xml" value="0.365625" />

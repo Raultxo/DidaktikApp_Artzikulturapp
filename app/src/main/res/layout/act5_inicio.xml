@@ -37,7 +37,7 @@
         android:layout_height="73dp"
         android:enabled="false"
         android:insetBottom="0dp"
-        android:text="Continuar"
+        android:text="Jarraitu"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

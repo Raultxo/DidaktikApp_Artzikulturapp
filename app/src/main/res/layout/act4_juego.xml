@@ -75,10 +75,10 @@
         android:id="@+id/txta4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Ordena las imagenes "
         android:layout_below="@+id/layoutAudio"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Irudiak ordenatu " />
 
     <!-- imagenes -->
     <RelativeLayout
@@ -237,7 +237,7 @@
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="-5dp"
-        android:text="comprobar"
-        android:textSize="18dp"/>
+        android:text="Egiaztatu"
+        android:textSize="18dp" />
 
 </RelativeLayout>

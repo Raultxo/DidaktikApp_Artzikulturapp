@@ -93,13 +93,14 @@
         android:layout_marginRight="15dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/queseria_mapa" />
+
     <TextView
         android:id="@+id/textoImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgCambio"
         android:layout_centerHorizontal="true"
-        android:text="Localizacion de la queseria"/>
+        android:text="Gaztandiagen kokapena" />
 
 
     <Button
