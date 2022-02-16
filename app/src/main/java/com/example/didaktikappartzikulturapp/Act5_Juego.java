@@ -44,7 +44,7 @@ public class Act5_Juego extends AppCompatActivity {
         });
 
         llenarSolucion();
-       // aniadirListener();
+        ponerBonito();
 
         txtH = findViewById(R.id.lblHorizontal);
         txtH.setText("HORIZONTAL \n" +
@@ -149,7 +149,6 @@ public class Act5_Juego extends AppCompatActivity {
         solucion.put(findViewById(R.id.resp38),"R");
         solucion.put(findViewById(R.id.resp39),"A");
 
-        ponerBonito();
     }
 
 
@@ -169,4 +168,5 @@ public class Act5_Juego extends AppCompatActivity {
             aux=ed;
         }
     }
+
 }

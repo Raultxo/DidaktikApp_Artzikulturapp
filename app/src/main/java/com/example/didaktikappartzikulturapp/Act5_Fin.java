@@ -28,7 +28,7 @@ public class Act5_Fin extends AppCompatActivity {
         // Boton para continuar e ir a la sopa de letras
         Button btnContinuar = findViewById(R.id.btnContinuar);
         btnContinuar.setOnClickListener(view -> {
-            Intent intent = new Intent(Act5_Fin.this, Main_VentanaDeveloper.class);
+            Intent intent = new Intent(Act5_Fin.this, Mapa.class);
             startActivity(intent);
         });
     }
