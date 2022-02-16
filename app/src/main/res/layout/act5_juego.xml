@@ -30,8 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-    <!--  botones  -->
-
+    <!--  corregir  -->
     <Button
         android:id="@+id/btnCorregir"
         android:layout_width="wrap_content"
@@ -42,621 +41,387 @@
         android:layout_marginTop="18dp"
         android:text="corregir" />
 
-    <Button
-        android:id="@+id/btnVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="22dp"
-        android:text="video" />
 
-    <!-- scroll vertical-->
-    <ScrollView
+    <HorizontalScrollView
+        android:id="@+id/layCrucigrama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_below="@id/btnCorregir"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnCorregir">
+        android:layout_marginTop="15dp">
 
-        <HorizontalScrollView
+        <!-- CRUCIGRAMA infinitooooo -->
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <!-- goiko plaza -->
+            <EditText
+                android:id="@+id/resp1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toEndOf="@id/resp11"
+                android:hint="1"
+                android:nextFocusDown="@+id/resp2"
+                android:textColorHint="@color/color3" />
 
-            <!-- CRUCIGRAMA infinitooooo -->
-            <RelativeLayout
+            <EditText
+                android:id="@+id/resp2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp1"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusDown="@+id/resp3" />
+
+            <EditText
+                android:id="@+id/resp3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp2"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusDown="@+id/resp4" />
+
+            <EditText
+                android:id="@+id/resp4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp3"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11"/>
+
+            <EditText
+                android:id="@+id/resp5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp4"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusForward="@+id/resp6"
+                android:singleLine="true" />
+
+         <!-- -->
+
+            <EditText
+                android:id="@+id/resp6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp5"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusDown="@+id/resp7"/>
+
+            <EditText
+                android:id="@+id/resp7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp6"
+                android:layout_alignBottom="@+id/resp11"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11"/>
+
+            <EditText
+                android:id="@+id/resp8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp7"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11" />
+
+            <EditText
+                android:id="@+id/resp9"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp8"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11" />
+
+            <EditText
+                android:id="@+id/resp10"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp9"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/resp11"
+                android:nextFocusDown="@+id/resp11" />
+
+
+            <!-- alkatea -->
+            <EditText
+                android:id="@+id/resp11"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp6"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="1dp"
+                android:hint="5"
+                android:textColorHint="@color/color3"/>
+
+            <EditText
+                android:id="@+id/resp12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp6"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp7" />
+
+            <EditText
+                android:id="@+id/resp13"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp6"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp12"/>
+
+            <EditText
+                android:id="@+id/resp14"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp6"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp13" />
+
+            <EditText
+                android:id="@+id/resp15"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp6"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp14"
+                android:nextFocusRight="@id/resp16" />
+
+            <EditText
+                android:id="@+id/resp16"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp6"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp15"
+                android:nextFocusUp="@id/resp17" />
+
+            <!-- jatetxea -->
+            <EditText
+                android:id="@+id/resp17"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@id/resp18"
+                android:layout_alignStart="@id/resp15"
+                android:layout_marginBottom="1dp"
+                android:hint="2"
+                android:nextFocusDown="@id/resp18"
+                android:textColorHint="@color/color3" />
+
+            <EditText
+                android:id="@+id/resp18"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@id/resp19"
+                android:layout_alignStart="@id/resp15"
+                android:layout_marginBottom="1dp"
+                android:nextFocusDown="@id/resp19" />
+
+            <EditText
+                android:id="@+id/resp19"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@id/resp15"
+                android:layout_alignStart="@id/resp15"
+                android:layout_marginBottom="1dp"
+                android:nextFocusDown="@id/resp20"/>
+
+            <EditText
+                android:id="@+id/resp20"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp15"
+                android:layout_alignStart="@id/resp15"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp21"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp20"
+                android:layout_alignStart="@id/resp15"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp22"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp21"
+                android:layout_alignStart="@id/resp15"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp23"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp22"
+                android:layout_alignStart="@id/resp15"
+                android:layout_marginTop="1dp" />
+
+            <!-- lau -->
+            <EditText
+                android:id="@+id/resp24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp23"
+                android:layout_marginRight="1dp"
+                android:layout_toStartOf="@id/resp23"
+                android:hint="6"
+                android:textColorHint="@color/color3" />
+
+            <EditText
+                android:id="@+id/resp25"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp23"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp23" />
+
+            <!-- hamasei -->
+            <EditText
+                android:id="@+id/resp26"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp18"
+                android:layout_marginRight="1dp"
+                android:layout_toStartOf="@id/resp18"
+                android:hint="4"
+                android:textColorHint="@color/color3" />
+
+            <EditText
+                android:id="@+id/resp27"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp18"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp18" />
+
+            <EditText
+                android:id="@+id/resp28"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp18"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp27" />
+
+            <EditText
+                android:id="@+id/resp29"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp18"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp28" />
+
+            <EditText
+                android:id="@+id/resp30"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp18"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp29" />
+
+            <EditText
+                android:id="@+id/resp31"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/resp18"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@id/resp30" />
+
+            <!-- militarra -->
+            <EditText
+                android:id="@+id/resp32"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@id/resp31"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginBottom="1dp"
+                android:hint="3"
+                android:textColorHint="@color/color3" />
+
+            <EditText
+                android:id="@+id/resp33"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp31"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp34"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp33"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp35"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp34"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp36"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp35"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp37"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp36"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp38"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp37"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginTop="1dp" />
+
+            <EditText
+                android:id="@+id/resp39"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/resp38"
+                android:layout_alignStart="@id/resp31"
+                android:layout_marginTop="1dp" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layCrucigrama"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblVertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/btnCorregir">
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/lblHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <!-- goiko plaza -->
-                <EditText
-                    android:id="@+id/resp1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="G"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp1"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="O"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp2"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="I"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp4"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp3"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="K"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text" />
-                <EditText
-                    android:id="@+id/resp5"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp4"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="O"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-
-                <EditText
-                    android:id="@+id/resp6"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp5"
-                    android:layout_marginTop="30dp"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="P"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp7"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp6"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="L"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp8"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp7"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp9"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp8"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="Z"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp10"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp9"
-                    android:layout_toEndOf="@id/resp11"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-
-
-                <!-- alkatea -->
-                <EditText
-                    android:id="@+id/resp11"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp6"
-                    android:layout_alignParentLeft="true"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp12"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp6"
-                    android:layout_toEndOf="@id/resp7"
-                    android:gravity="center"
-                    android:hint="K"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp13"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp6"
-                    android:layout_toEndOf="@id/resp12"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp14"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp6"
-                    android:layout_toEndOf="@id/resp13"
-                    android:gravity="center"
-                    android:hint="T"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp15"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp6"
-                    android:layout_toEndOf="@id/resp14"
-                    android:gravity="center"
-                    android:hint="E"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp16"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp6"
-                    android:layout_toEndOf="@id/resp15"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-
-                <!-- jatetxea -->
-                <EditText
-                    android:id="@+id/resp17"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_above="@id/resp18"
-                    android:layout_alignStart="@id/resp15"
-                    android:gravity="center"
-                    android:hint="J"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3" />
-                <EditText
-                    android:id="@+id/resp18"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignStart="@id/resp15"
-                    android:layout_above="@id/resp19"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-
-                <EditText
-                    android:id="@+id/resp19"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_above="@id/resp15"
-                    android:layout_alignStart="@id/resp15"
-                    android:gravity="center"
-                    android:hint="T"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3" />
-                <EditText
-                    android:id="@+id/resp20"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignStart="@id/resp15"
-                    android:layout_below="@id/resp15"
-                    android:gravity="center"
-                    android:hint="T"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp21"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignStart="@id/resp15"
-                    android:layout_below="@id/resp20"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:hint="X"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp22"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignStart="@id/resp15"
-                    android:layout_below="@id/resp21"
-                    android:gravity="center"
-                    android:hint="E"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp23"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignStart="@id/resp15"
-                    android:layout_below="@id/resp22"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-
-                <!-- lau -->
-                <EditText
-                    android:id="@+id/resp24"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp23"
-                    android:layout_toStartOf="@id/resp23"
-                    android:gravity="center"
-                    android:hint="L"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp25"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp23"
-                    android:layout_toEndOf="@id/resp23"
-                    android:gravity="center"
-                    android:hint="U"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-
-                <!-- hamasei -->
-                <EditText
-                    android:id="@+id/resp26"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp18"
-                    android:layout_toStartOf="@id/resp18"
-                    android:gravity="center"
-                    android:hint="H"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp27"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp18"
-                    android:layout_toEndOf="@id/resp18"
-                    android:gravity="center"
-                    android:hint="M"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp28"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp18"
-                    android:layout_toEndOf="@id/resp27"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp29"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp18"
-                    android:layout_toEndOf="@id/resp28"
-                    android:gravity="center"
-                    android:hint="S"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp30"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp18"
-                    android:layout_toEndOf="@id/resp29"
-                    android:gravity="center"
-                    android:hint="E"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp31"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp18"
-                    android:layout_toEndOf="@id/resp30"
-                    android:gravity="center"
-                    android:hint="I"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-
-                <!-- militarra -->
-                <EditText
-                    android:id="@+id/resp32"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_above="@id/resp31"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="M"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3" />
-                <EditText
-                    android:id="@+id/resp33"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp31"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="L"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3" />
-                <EditText
-                    android:id="@+id/resp34"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp33"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="I"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3" />
-                <EditText
-                    android:id="@+id/resp35"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp34"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="T"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp36"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp35"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp37"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp36"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="R"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp38"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp37"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="R"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp39"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp38"
-                    android:layout_alignStart="@id/resp31"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-
-                <!-- barrokoa -->
-                <EditText
-                    android:id="@+id/resp40"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp39"
-                    android:layout_toStartOf="@id/resp39"
-                    android:gravity="center"
-                    android:hint="B"
-                    android:textColorHint="@color/color3"
-                    android:inputType="text"/>
-                <EditText
-                    android:id="@+id/resp41"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp39"
-                    android:layout_toEndOf="@id/resp39"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"
-                    android:hint="R"/>
-                <EditText
-                    android:id="@+id/resp42"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp39"
-                    android:layout_toEndOf="@id/resp41"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"
-                    android:hint="R" />
-                <EditText
-                    android:id="@+id/resp43"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp39"
-                    android:layout_toEndOf="@id/resp42"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"
-                    android:hint="O"/>
-                <EditText
-                    android:id="@+id/resp44"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp39"
-                    android:layout_toEndOf="@id/resp43"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"
-                    android:hint="K"/>
-                <EditText
-                    android:id="@+id/resp45"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp39"
-                    android:layout_toEndOf="@id/resp44"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"
-                    android:hint="O"/>
-                <EditText
-                    android:id="@+id/resp46"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignTop="@id/resp39"
-                    android:layout_toEndOf="@id/resp45"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"
-                    android:hint="A"/>
-
-                <!-- aiara dorrea -->
-                <EditText
-                    android:id="@+id/resp47"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_above="@id/resp48"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp48"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_above="@id/resp49"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="I"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp49"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_above="@id/resp42"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp50"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp42"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-
-                <EditText
-                    android:id="@+id/resp51"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp50"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:hint="D"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp52"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp51"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="O"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp53"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp52"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="R"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp54"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp53"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="R"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp55"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp54"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="E"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-                <EditText
-                    android:id="@+id/resp56"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/resp55"
-                    android:layout_alignStart="@id/resp42"
-                    android:gravity="center"
-                    android:hint="A"
-                    android:inputType="text"
-                    android:textColorHint="@color/color3"/>
-
-            </RelativeLayout>
-
-
-                </HorizontalScrollView>
-            </ScrollView>
-
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
