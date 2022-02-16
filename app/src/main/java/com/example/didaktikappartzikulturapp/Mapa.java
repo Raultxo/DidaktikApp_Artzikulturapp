@@ -68,7 +68,7 @@ public class Mapa extends AppCompatActivity {
                             if (feature.getProperty("title") != null) {
                                 title = feature.getProperty("title").toString();
                             }
-                            System.out.println("asdaaaa      asdasd        :"+title);
+
                             if (title != null) {
                                 Intent intent = null;
                                 if (title.contains("1.")) {
